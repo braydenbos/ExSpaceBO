@@ -5,39 +5,59 @@ using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
+    //movement
     public float movementSpeed;
     private float originalSpeed;
-    private float sprint = 20;
-    public float speedmultiplier;
+    //sprinting
     private bool isSprinting = false;
     public RectTransform sprintbar;
+    private float sprint;
+    public float speedmultiplier;
+    private float sprintcool;
+    //stamina
+    public float stamup;
+    public float stamdown;
+    public float maxstam = 20;
     void Start()
     {
         originalSpeed = movementSpeed;
+        sprint = maxstam;
+
     }
     void Update()
     {
-        sprintbar.sizeDelta = new Vector2(sprint, sprintbar.sizeDelta.y);
+        print(sprint);
         // Sprinting
-        print(movementSpeed);
-        if (Input.GetKeyDown(KeyCode.LeftShift) && sprint >= 20 && !isSprinting)
+        if(Input.GetKeyDown(KeyCode.LeftShift) && sprint >= maxstam && !isSprinting)
         {
             movementSpeed *= speedmultiplier;
             isSprinting = true;
         }
         if(Input.GetKey(KeyCode.LeftShift) && isSprinting)
         {
-            sprint -= 10 * Time.deltaTime;
+            sprint -= stamdown * Time.deltaTime;
         }
-        if (!isSprinting && sprint < 20)
+        if(!isSprinting && sprint < maxstam)
         {
-            sprint += 8 * Time.deltaTime;
+            sprint += stamup * Time.deltaTime;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift) || sprint <= 0)
+        if(Input.GetKeyUp(KeyCode.LeftShift))
         {
             movementSpeed = originalSpeed;
             isSprinting = false;
         }
+        if(sprint <= 0)
+        {
+            movementSpeed = originalSpeed;
+            sprintcool += 1 * Time.deltaTime;
+            sprint = 0;
+            if(sprintcool >= 2)
+            {
+                isSprinting = false;
+                sprintcool = 0;
+            }
+        }
+        sprintbar.sizeDelta = new Vector2(sprint/maxstam*20, sprintbar.sizeDelta.y);
 
         // Walking
         if (Input.GetKey(KeyCode.W))
