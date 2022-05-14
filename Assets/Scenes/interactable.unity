@@ -744,7 +744,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
-  diagonal: 0
   sprintbar: {fileID: 396683915}
   speedmultiplier: 2
   stamup: 28

@@ -7,16 +7,20 @@ public class cameraMovement : MonoBehaviour
     public float speed;
     public float length;
     private float timer;
-    
     public Transform target;
+    private GameObject Player;
     // Use this for initialization
     void Start()
     {
+        Player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerMovement playerMovement = Player.GetComponent<playerMovement>();
+        speed = playerMovement.movementSpeed;
+
         if (transform.position.x != target.position.x || transform.position.y != target.position.y)
         {
             timer += 100 * Time.deltaTime;
