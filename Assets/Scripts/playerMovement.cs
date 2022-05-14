@@ -8,6 +8,9 @@ public class playerMovement : MonoBehaviour
     //movement
     public float movementSpeed;
     private float originalSpeed;
+    private float buttonsPressed;
+    public float diagonal;
+
     //sprinting
     private bool isSprinting = false;
     public RectTransform sprintbar;
@@ -26,7 +29,6 @@ public class playerMovement : MonoBehaviour
     }
     void Update()
     {
-        print(sprint);
         // Sprinting
         if(Input.GetKeyDown(KeyCode.LeftShift) && sprint >= maxstam && !isSprinting)
         {
@@ -63,18 +65,42 @@ public class playerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += new Vector3(0, movementSpeed, 0) * Time.deltaTime;
+            buttonsPressed += 1;
+        }
+        else
+        {
+            buttonsPressed -= 1;
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(movementSpeed,0, 0) * Time.deltaTime;
+            buttonsPressed += 1;
+        }
+        else
+        {
+            buttonsPressed -= 1;
         }
         if (Input.GetKey(KeyCode.S))
         {
             transform.position += new Vector3(0, -movementSpeed, 0) * Time.deltaTime;
+            buttonsPressed += 1;
+        }
+        else
+        {
+            buttonsPressed -= 1;
         }
         if (Input.GetKey(KeyCode.A))
         {
             transform.position += new Vector3(-movementSpeed, 0, 0) * Time.deltaTime;
+            buttonsPressed += 1;
+        }
+        else
+        {
+            buttonsPressed -= 1;
+        }
+        if (buttonsPressed >= 2)
+        {
+            movementSpeed *= 2;
         }
     }
 }
