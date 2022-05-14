@@ -23,10 +23,15 @@ public class playerMovement : MonoBehaviour
     public float stamdown;
     public float maxstam = 20;
 
+    //interactions
+    public GameObject interactableIcon;
+    private Vector2 boxSize = new Vector2(0.1f, 1f);
+
     void Start()
     {
         originalSpeed = movementSpeed;
         sprint = maxstam;
+        interactableIcon.SetActive(false);
     }
 
     void Update()
@@ -61,37 +66,64 @@ public class playerMovement : MonoBehaviour
         transform.position += movementSpeed * Time.deltaTime * moveDir;
 
         // Sprinting
-        if (Input.GetKeyDown(KeyCode.LeftShift) && sprint >= maxstam && !isSprinting)
+        if (Input.GetKeyDown(KeyCode.LeftShift) &&( !isSprinting || sprint > 0))
         {
             movementSpeed *= speedmultiplier;
             isSprinting = true;
         }
-        if (Input.GetKey(KeyCode.LeftShift) && isSprinting)
+        if (Input.GetKey(KeyCode.LeftShift) && isSprinting && sprint > 0)
         {
             sprint -= stamdown * Time.deltaTime;
+            sprintcool = 0;
         }
         if (!isSprinting && sprint < maxstam)
         {
             sprint += stamup * Time.deltaTime;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            movementSpeed = originalSpeed;
-            isSprinting = false;
-        }
-        if (sprint <= 0)
+        if (sprint <= 0 || (Input.GetKeyUp(KeyCode.LeftShift)) || sprintcool > 0)
         {
             movementSpeed = originalSpeed;
             sprintcool += 1 * Time.deltaTime;
-            sprint = 0;
-            if (sprintcool >= 2)
+            print(sprintcool);
+            if (sprintcool >= 0.8)
             {
                 isSprinting = false;
                 sprintcool = 0;
             }
         }
 
-        sprintbar.sizeDelta = new Vector2(sprint / maxstam * 20, sprintbar.sizeDelta.y);
+        sprintbar.sizeDelta = new Vector2(sprint / maxstam * 100, sprintbar.sizeDelta.y);
 
+        //interacting
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            CheckInteraction();
+        }
     }
+    public void OpenInteractableIcon()
+    {
+        interactableIcon.SetActive(true);
+    }
+    public void CloseInteractableIcon()
+    {
+        interactableIcon.SetActive(false);
+    }
+
+    private void CheckInteraction()
+    {
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+
+        if(hits.Length > 0)
+        {
+            foreach(RaycastHit2D rc in hits)
+            {
+                if (rc.transform.GetComponent<interactable>())
+                {
+                    rc.transform.GetComponent<interactable>().interact();
+                    return;
+                }
+            }
+        }
+    }
+
 }
