@@ -7,26 +7,39 @@ public class openable : interactable
 {
     public Sprite open;
     public Sprite closed;
-
+    private GameObject Enemy;
     public SpriteRenderer sr;
-    private bool isopen;
+    public float timertime;
+    private float timer;
+    private bool activated = false;
 
     public override void interact()
     {
-        if (isopen)
+        activated = true;
+        timer = 0;
+    }
+    private void Update()
+    {
+        enemy enemy = Enemy.GetComponent<enemy>();
+        if (activated)
         {
-            sr.sprite = closed;
+            timer += 1 * Time.deltaTime;
+        }
+        if (timer < timertime)
+        {
+            enemy.targettag = gameObject.tag;
         }
         else
         {
-            sr.sprite = open;
+            enemy.targettag = "Player";
+            activated = false;
         }
-        isopen = !isopen;
-    }
 
+    }
     private void Start()
     {
+        timer = timertime;
+        Enemy = GameObject.Find("Enemy");
         sr = GetComponent<SpriteRenderer>();
-        sr.sprite = closed;
     }
 }

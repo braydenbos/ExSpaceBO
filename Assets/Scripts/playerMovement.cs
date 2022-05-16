@@ -84,7 +84,6 @@ public class playerMovement : MonoBehaviour
         {
             movementSpeed = originalSpeed;
             sprintcool += 1 * Time.deltaTime;
-            print(sprintcool);
             if (sprintcool >= 0.8)
             {
                 isSprinting = false;

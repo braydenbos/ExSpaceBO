@@ -20,6 +20,9 @@ public abstract class interactable : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collision.GetComponent<playerMovement>().CloseInteractableIcon();
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<playerMovement>().CloseInteractableIcon();
+        }
     }
 }
