@@ -21,7 +21,6 @@ public class enemy : MonoBehaviour
                 speed *= 2;
             }
         }
-        print(targettag);
         target = GameObject.FindGameObjectWithTag(targettag).GetComponent<Transform>();
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         prefframe = targettag;
