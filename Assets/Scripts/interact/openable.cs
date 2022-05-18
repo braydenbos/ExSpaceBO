@@ -15,6 +15,7 @@ public class openable : interactable
 
     public override void interact()
     {
+        print("helloo");
         activated = true;
         timer = 0;
     }
