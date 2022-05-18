@@ -15,9 +15,9 @@ public class enemy : MonoBehaviour
             if(targettag == "Player")
             {
                 speed /= 2;
-            }
+    }
             else
-            {
+    {
                 speed *= 2;
             }
         }
