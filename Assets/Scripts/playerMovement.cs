@@ -26,9 +26,12 @@ public class playerMovement : MonoBehaviour
     //interactions
     public GameObject interactableIcon;
     private Vector2 boxSize = new Vector2(0.1f, 1f);
+    public GameObject Snap;
+    public bool sloweddown = false;
 
     void Start()
     {
+        // movement setup
         originalSpeed = movementSpeed;
         sprint = maxstam;
         interactableIcon.SetActive(false);
@@ -36,6 +39,21 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Snap.transform.childCount > 0 && !sloweddown)
+        {
+            movementSpeed -= 2;
+            sloweddown = true;
+        }
+        else if(Snap.transform.childCount < 1 && sloweddown)
+
+        {
+            print("het werkt");
+            movementSpeed += 2;
+            sloweddown = false;
+
+        }
+        
+
         // Walking
         if (Input.GetKey(KeyCode.W))
         {
@@ -61,6 +79,7 @@ public class playerMovement : MonoBehaviour
         {
             moveX = 0f;
         }
+
 
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
         transform.position += movementSpeed * Time.deltaTime * moveDir;
