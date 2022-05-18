@@ -8,22 +8,22 @@ public class droppoint : interactable
     private bool activated = false;
     public string pickup;
     private GameObject pickupobject;
-    private GameObject player;
     public bool alive = true;
 
     public override void interact()
     {
-        pickupobject = GameObject.Find(pickup);
-        pickup pickupscript = pickupobject.GetComponent<pickup>();
-        if (pickupscript.pickedup)
+        if (!activated)
         {
-            player = GameObject.Find("player");
-            playerMovement playerscript = player.GetComponent<playerMovement>();
-            playerscript.sloweddown = false;
-            activated = true;
-            print("Poof");
-            pickupobject.SetActive(false);
-            pickupscript.pickedup = false;
+            pickupobject = GameObject.Find(pickup);
+            pickup pickupscript = pickupobject.GetComponent<pickup>();
+            if (pickupscript.pickedup)
+            {
+                pickupobject.transform.parent = null;
+                Destroy(pickupobject);
+                activated = true;
+                pickupscript.pickedup = false;
+            }
+
         }
     }
 }

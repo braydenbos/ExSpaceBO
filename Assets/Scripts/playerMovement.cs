@@ -39,6 +39,7 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+        print(sloweddown);
         if (Snap.transform.childCount > 0 && !sloweddown)
         {
             movementSpeed -= 2;
@@ -47,7 +48,6 @@ public class playerMovement : MonoBehaviour
         else if(Snap.transform.childCount < 1 && sloweddown)
 
         {
-            print("het werkt");
             movementSpeed += 2;
             sloweddown = false;
 
