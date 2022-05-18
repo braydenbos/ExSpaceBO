@@ -39,7 +39,6 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-        print(sloweddown);
         if (Snap.transform.childCount > 0 && !sloweddown)
         {
             movementSpeed -= 2;
@@ -52,26 +51,26 @@ public class playerMovement : MonoBehaviour
             sloweddown = false;
 
         }
-        
+
 
         // Walking
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetAxis("Vertical") > 0)
         {
             moveY = 1f;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetAxis("Vertical") < 0)
         {
             moveY = -1f;
         }
         else
-        {  
+        {
             moveY = 0f;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetAxis("Horizontal") < 0)
         {
             moveX = -1f;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetAxis("Horizontal") > 0)
         {
             moveX = 1f;
         }
@@ -80,17 +79,18 @@ public class playerMovement : MonoBehaviour
             moveX = 0f;
         }
 
-
+        print(movementSpeed);
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
         transform.position += movementSpeed * Time.deltaTime * moveDir;
 
         // Sprinting
-        if (Input.GetKeyDown(KeyCode.LeftShift) &&( !isSprinting || sprint > 0))
+        if (Input.GetAxis("Sprint") > 0 &&!isSprinting )
         {
+            originalSpeed = movementSpeed;
             movementSpeed *= speedmultiplier;
             isSprinting = true;
         }
-        if (Input.GetKey(KeyCode.LeftShift) && isSprinting && sprint > 0)
+        if (Input.GetAxis("Sprint") > 0 && isSprinting && sprint > 0)
         {
             sprint -= stamdown * Time.deltaTime;
             sprintcool = 0;
@@ -99,7 +99,7 @@ public class playerMovement : MonoBehaviour
         {
             sprint += stamup * Time.deltaTime;
         }
-        if (sprint <= 0 || (Input.GetKeyUp(KeyCode.LeftShift)) || sprintcool > 0)
+        if (sprint <= 0 || Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.Joystick1Button1) || sprintcool > 0 )
         {
             movementSpeed = originalSpeed;
             sprintcool += 1 * Time.deltaTime;
@@ -113,7 +113,7 @@ public class playerMovement : MonoBehaviour
         sprintbar.sizeDelta = new Vector2(sprint / maxstam * 100, sprintbar.sizeDelta.y);
 
         //interacting
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetAxis("Interact") > 0)
         {
             CheckInteraction();
         }

@@ -23,6 +23,13 @@ public class droppoint : interactable
                 activated = true;
                 pickupscript.pickedup = false;
             }
+            else
+            {
+
+            }
+        }
+        else
+        {
 
         }
     }
