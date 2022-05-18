@@ -46,7 +46,7 @@ public class playerMovement : MonoBehaviour
             moveY = -1f;
         }
         else
-        {
+        {  
             moveY = 0f;
         }
         if (Input.GetKey(KeyCode.A))

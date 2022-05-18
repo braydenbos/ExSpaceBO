@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class openable : interactable
+public class distractable : interactable
 {
     public Sprite open;
     public Sprite closed;
