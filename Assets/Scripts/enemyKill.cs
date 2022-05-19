@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class enemyKill : MonoBehaviour
 {
+    public bool shield = true;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Enemy"))
         {
-            gameObject.SetActive(false);
+            if (!shield)
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                shield = false;
+            }
         }
     }
 }

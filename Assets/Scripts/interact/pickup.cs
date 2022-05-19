@@ -10,8 +10,12 @@ public class pickup : interactable
     public override void interact()
     {
         Snap = GameObject.Find("Snap");
-        transform.SetParent(Snap.transform);
-        transform.position = new Vector3(Snap.transform.position.x, Snap.transform.position.y, Snap.transform.position.z);
-        pickedup = true;
+        if (Snap.transform.childCount == 0)
+        {
+            transform.SetParent(Snap.transform);
+            transform.position = new Vector3(Snap.transform.position.x, Snap.transform.position.y, Snap.transform.position.z);
+            pickedup = true;
+
+        }
     }
 }

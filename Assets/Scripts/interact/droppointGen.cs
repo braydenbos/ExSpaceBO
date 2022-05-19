@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class droppoint : interactable
+public class droppointGen : interactable
 {
-    private bool activated = false;
-    public string pickup;
+    public bool activated = false;
     private GameObject pickupobject;
     public bool alive = true;
 
@@ -14,7 +13,7 @@ public class droppoint : interactable
     {
         if (!activated)
         {
-            pickupobject = GameObject.Find(pickup);
+            pickupobject = GameObject.Find("gas");
             pickup pickupscript = pickupobject.GetComponent<pickup>();
             if (pickupscript.pickedup)
             {
@@ -23,14 +22,6 @@ public class droppoint : interactable
                 activated = true;
                 pickupscript.pickedup = false;
             }
-            else
-            {
-
-            }
-        }
-        else
-        {
-
         }
     }
 }
