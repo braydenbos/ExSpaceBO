@@ -79,7 +79,6 @@ public class playerMovement : MonoBehaviour
             moveX = 0f;
         }
 
-        print(movementSpeed);
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
         transform.position += movementSpeed * Time.deltaTime * moveDir;
 
