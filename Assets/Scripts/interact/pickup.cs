@@ -19,7 +19,7 @@ public class pickup : interactable
     }
     private void Update()
     {
-    /*    if (pickedup)
+        if (pickedup)
         {
             if(Input.GetAxis("Drop") >0)
             {
@@ -27,6 +27,6 @@ public class pickup : interactable
                 transform.parent = null;
 
             }
-        }*/
+        }
     }
 }
