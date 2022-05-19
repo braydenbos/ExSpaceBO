@@ -8,13 +8,16 @@ public class enemy : MonoBehaviour
     private Transform target;
     public string targettag = "Player";
     public string prefframe;
+    private GameObject Enemy;
     void Update()
     {
+        Enemy = GameObject.Find("Enemy");
         if(targettag != prefframe)
         {
             if(targettag == "Player")
             {
                 speed /= 2;
+
     }
             else
     {
@@ -24,5 +27,6 @@ public class enemy : MonoBehaviour
         target = GameObject.FindGameObjectWithTag(targettag).GetComponent<Transform>();
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         prefframe = targettag;
+
     }
 }
