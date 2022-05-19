@@ -15,7 +15,18 @@ public class pickup : interactable
             transform.SetParent(Snap.transform);
             transform.position = new Vector3(Snap.transform.position.x, Snap.transform.position.y, Snap.transform.position.z);
             pickedup = true;
-
         }
+    }
+    private void Update()
+    {
+    /*    if (pickedup)
+        {
+            if(Input.GetAxis("Drop") >0)
+            {
+                pickedup = false;
+                transform.parent = null;
+
+            }
+        }*/
     }
 }

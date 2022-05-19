@@ -11,10 +11,12 @@ public class enemyKill : MonoBehaviour
         {
             if (!shield)
             {
+                print("doei");
                 gameObject.SetActive(false);
             }
             else
             {
+                print("hallo");
                 shield = false;
             }
         }
