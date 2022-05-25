@@ -28,6 +28,8 @@ public class playerMovement : MonoBehaviour
     private Vector2 boxSize = new Vector2(0.1f, 1f);
     public GameObject Snap;
     public bool sloweddown = false;
+    public Sprite E;
+    public Sprite Square;
 
     void Start()
     {
@@ -78,6 +80,16 @@ public class playerMovement : MonoBehaviour
         {
             moveX = 0f;
         }
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
+            Icon.sprite = E;
+        }
+        else if (Input.GetAxisRaw("Horizontal") !=0 || Input.GetAxisRaw("Vertical") != 0)
+        {
+            SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
+            Icon.sprite = Square;
+        }
 
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
         transform.position += movementSpeed * Time.deltaTime * moveDir;
@@ -117,6 +129,7 @@ public class playerMovement : MonoBehaviour
             CheckInteraction();
         }
     }
+
     public void OpenInteractableIcon()
     {
         interactableIcon.SetActive(true);
