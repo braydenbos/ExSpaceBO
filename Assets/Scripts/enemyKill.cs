@@ -11,11 +11,15 @@ public class enemyKill : MonoBehaviour
         {
             if (!shield)
             {
+                print("doei");
                 gameObject.SetActive(false);
             }
             else
             {
+                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+                print("hallo");
                 shield = false;
+                spriteRenderer.color = Color.yellow;
             }
         }
     }

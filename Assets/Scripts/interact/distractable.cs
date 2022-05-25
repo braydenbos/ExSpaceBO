@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,22 +33,21 @@ public class distractable : interactable
     }
     private void Update()
     {
-        enemy enemy = Enemy.GetComponent<enemy>();
+        Enemy = GameObject.Find("Enemy");
+        AIDestinationSetter targets = Enemy.GetComponent<AIDestinationSetter>();
         droppoint = GameObject.Find("genarator");
         droppointGen droppointGen = droppoint.GetComponent<droppointGen>();
         distractable distractable = GetComponent<distractable>();
-        print(enemy.targettag);
         if (activated && droppointGen.activated)
         {
-            print("hello");
             timer += 1 * Time.deltaTime;
             if (timer < timertime)
             {
-                enemy.targettag = gameObject.tag;
+                targets.targettag = gameObject.tag;
             }
             else
             {
-                enemy.targettag = "Player";
+                targets.targettag = "Player";
                 activated = false;
                 Destroy(distractable);
             }
