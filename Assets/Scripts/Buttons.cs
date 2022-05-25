@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    public void ToStart()
+    public void toStart()
     {
         SceneManager.LoadScene("wiresToAndFrom");
+    }
+    public void quitGame()
+    {
+        Application.Quit();
     }
 }
