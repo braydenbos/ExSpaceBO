@@ -902,6 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d01c5290233314da0ba5ce879bcf51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shield: 1
 --- !u!1 &557449086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719e7563ae0e24947937bb988d70415a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickup: gas
+  activated: 0
   alive: 0
 --- !u!1 &939981678
 GameObject:
@@ -1736,6 +1737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e4113cff719fc4f9516423bd1e8191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Snap: {fileID: 0}
   pickedup: 0
 --- !u!1 &1534248153
 GameObject:
