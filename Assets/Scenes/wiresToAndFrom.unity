@@ -1459,7 +1459,7 @@ MonoBehaviour:
   radius: 0.5
   height: 2
   canMove: 1
-  maxSpeed: 8
+  maxSpeed: 0
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -1576,8 +1576,7 @@ Transform:
   m_LocalPosition: {x: 46.71, y: 0.5, z: 0}
   m_LocalScale: {x: 3, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1857926125}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2444,12 +2443,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857926124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.8942556, y: 1.5900928, z: 15.181789}
-  m_LocalScale: {x: 0.33333334, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 26.027233, y: 3.6801856, z: 30.363579}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1179205716}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1857926126
 MonoBehaviour:
@@ -2465,7 +2464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIezA/5hPWwIAABIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzk3GDgSH3lpCSA8kTEgnF18Ua401yJJHkgMkw3/vrmxjl05PiPeedt9+yF9MaldB5o1dWilWRgD7PmJ0Zt9GPfkIB741eiM/odO8SeELEvGgeeFeGsRjuuZMCd7K7IfeKhJHCNZa5saWC7GFuXHeIZxz5QApazzd1gh9jdgBf65mdOWIp5uETp94mkWjEx4z0B5sL+2EnaxR1TpTvKxAkOVenIxb9XgcZBqLaRVkPDNKSdc6Yf5YhUo3VQEWqFQhORYWssfXtwgUILeFJ5vD28957sC3niw/3kuLHWrCsp+maVvJ3a4x9sFVTYnugqUm5Oof9ioOdG5N+dhljSPK4AuZ7V74MePOD7o6hO8HxkN39lzt+LuCtwL0k1laU2uBpLc1Xa0d3Nz3f8+FzQvIdj3eWL0A6+r/s6EaTqH2w1zJ8p2o60kDbJQJ7Q6TB4uD+YWGw164NgSi5OK3g1e+HS5QSzxI6zxSbZWa7L2b2pKULULPqJraz43VEODWdAWaK39cYxh/OcALbpD2gnng9FTa5C3XvYCLKwHu9VF0Qa3N/jwsV5j9ClzxXHslNfSmiXjCPs2N1s1+DXvSXdvUNufZ0MO2luLv3WJ8MhXRNEmSyThKpnFyFfMZ3N5F+WQWC4hzYGH5pMZCuVo3Ttv+4Nh0b0rjonWfkNHS8iosu7B8v5SfpRn0XOrcbDILoJ+bCGfnYDEJvkqxEBI7tAHvpQ4DZ18pUybbgUjPgdJQ6uLgLU/7KCmr5IfxhKRsHr4ZKSP4vMxrCx8S9pS8C3Zipz9QSwMEFAAACAgAAAgh7PNgQMBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFKiiVmKgZm5ubmJsYG5maG5rmGiZaqphUGaiaVhSqphWqpSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7MD/mE9bAgAAEgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7PNgQMBtAAAAeAAAAAkAJAAAAAAAAAAAAAAAqAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABgAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAIIezW27W5aQIAACQFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzg1jJxDHvbWEkB6SMKWdXHxRrDXWIEseSQ6QDP+9u7KNXTo9Id7bj7dPK38yqV0NuTd2ZaV4MgLY1wmjM/syGchHOPCt0Rv5AX3MqxS+pCAeYn5yLw3iMaU5U4G3Mv+mt4qCIwQbLQtjq6XYwsI47xAuuHKAlDWesjVCnxN2wJ+rlFKOeLpO6PSBpzSanPCYg/Zgh9A+sA9roxqdK17VIEjyEJwk02Sepuls3mXNZ9MoQeAuZGmcrUuIpjfX1M0oJV2njfljHWbf1CVYoOGF5Dhq0BNPqWgJclt6Ej7OfikKB75TafnxXlr0rC3LvpvWyIq7XSv1nauGGrWq2pJP/7BXcaALa6rHvmscUQdfynz3kx9z7vzI5zF8PxIe/NpzteNvCl5L0M9mZU2jBZLeNpTaOLi+H/6eB1uUkO8GvJV6ATb1/2+LZjiF2Q8LJau34PysBTbKBLvDLoDFu/mBgsOmuK4EoqTit4NffDteqY54kNZ5pLopNcl7M42lULYMntE0jV8YqyHAnegaNFf+uMYy/vICL7hR2wvmgdPj6Zp3XP8mLlICPMRH0QW1NvvzZbnS7J/AlS+NV1LDIJqIZ/RpYbRu92vsSZ+2aWzB87GGbSPF37vF+OxWRLdJksxuouQ2Tq5insL8LipmaSwgLoCF5ZMaB+Vq3Srt/MFr04MojYvWf1QmK8vrsOzC8v1KflRm5LnUhdnkFkC/tBXOysFiE3yYYikkOrQB76UOF84+M6ZMvgORnQtlYdTlwVueDVUyVst34wnJ2CJ8RTJG8HmZ1xbeJeypeV/sxE5/AFBLAwQUAAAICAAACCHs82BAwG0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0UqKJWYqBmbm5uYmxgbmZobmuYaJlqqmFQZqJpWFKqmFaqlIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHs1tu1uWkCAAAkBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHs82BAwG0AAAB4AAAACQAkAAAAAAAAAAAAAAC2AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAG4DAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -2549,7 +2548,7 @@ GameObject:
   - component: {fileID: 2044032199}
   - component: {fileID: 2044032198}
   - component: {fileID: 2044032197}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
