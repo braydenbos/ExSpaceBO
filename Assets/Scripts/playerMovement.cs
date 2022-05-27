@@ -31,6 +31,11 @@ public class playerMovement : MonoBehaviour
     public Sprite E;
     public Sprite Square;
 
+    //menu open
+    public bool menuOpen = false;
+    public GameObject menu;
+
+
     void Start()
     {
         // movement setup
@@ -41,6 +46,7 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+        // Pickup
         if (Snap.transform.childCount > 0 && !sloweddown)
         {
             movementSpeed -= 2;
@@ -123,7 +129,12 @@ public class playerMovement : MonoBehaviour
 
         sprintbar.sizeDelta = new Vector2(sprint / maxstam * 100, sprintbar.sizeDelta.y);
 
-        //interacting
+        menu.SetActive(menuOpen);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuOpen = !menuOpen;
+        }
+
         if (Input.GetAxis("Interact") > 0)
         {
             CheckInteraction();
