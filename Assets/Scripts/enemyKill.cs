@@ -20,7 +20,7 @@ public class enemyKill : MonoBehaviour
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 print("hallo");
                 shield = false;
-                spriteRenderer.color = Color.yellow;
+                spriteRenderer.color = Color.white;
             }
         }
     }
