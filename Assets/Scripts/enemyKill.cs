@@ -13,7 +13,7 @@ public class enemyKill : MonoBehaviour
             if (!shield)
             {
                 print("doei");
-                SceneManager.LoadScene("wiresToAndFrom");
+                SceneManager.LoadScene("mainMenu");
             }
             else
             {
