@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class deur : interactable
 {
-    public int timer = 1;
+    public int timer;
     private float doortimer;
     public GameObject door;
-    public GameObject buttonBar;
+    public GameObject TimerBar;
     private bool open = false;
     private float ogsize;
 
-    public void Start()
+    private void Start()
     {
-        ogsize = buttonBar.transform.localScale.y;
+        ogsize = TimerBar.transform.localScale.y;
     }
     public override void interact()
     {
@@ -22,7 +22,7 @@ public class deur : interactable
             doortimer = timer;
             Destroy(door);
             gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-            open=true;
+            open = true;
         }
         else
         {
@@ -35,9 +35,6 @@ public class deur : interactable
         {
             doortimer -= 1 * Time.deltaTime;
         }
-
-
-        buttonBar.transform.localScale = new Vector2(buttonBar.transform.localScale.x , doortimer / timer * ogsize);
-
+        TimerBar.transform.localScale = new Vector2(TimerBar.transform.localScale.x,ogsize/timer* doortimer);
     }
 }

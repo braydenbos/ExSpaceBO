@@ -10,6 +10,8 @@ public class playerMovement : MonoBehaviour
     private float originalSpeed;
     private float moveX;
     private float moveY;
+    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer pickedUpSR;
 
     //sprinting
     private bool isSprinting = false;
@@ -42,6 +44,8 @@ public class playerMovement : MonoBehaviour
         originalSpeed = movementSpeed;
         sprint = maxstam;
         interactableIcon.SetActive(false);
+        //sprite renderer
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -49,6 +53,7 @@ public class playerMovement : MonoBehaviour
         // Pickup
         if (Snap.transform.childCount > 0 && !sloweddown)
         {
+            pickedUpSR = Snap.transform.GetComponentInChildren<SpriteRenderer>();
             movementSpeed -= 2;
             sloweddown = true;
         }
@@ -57,7 +62,6 @@ public class playerMovement : MonoBehaviour
         {
             movementSpeed += 2;
             sloweddown = false;
-
         }
 
 
@@ -77,10 +81,20 @@ public class playerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         {
             moveX = -1f;
+            spriteRenderer.flipX = true;
+            if (sloweddown)
+            {
+                pickedUpSR.flipX = true;
+            }
         }
         else if (Input.GetAxis("Horizontal") > 0)
         {
             moveX = 1f;
+            spriteRenderer.flipX = false;
+            if (sloweddown)
+            {
+                pickedUpSR.flipX = false;
+            }
         }
         else
         {

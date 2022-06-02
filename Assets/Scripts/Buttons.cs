@@ -7,7 +7,7 @@ public class Buttons : MonoBehaviour
 {
     public GameObject player;
 
-    public void toStart(string index)
+    public void toStart(int index)
     {
         SceneManager.LoadScene("World" + index);
     }
