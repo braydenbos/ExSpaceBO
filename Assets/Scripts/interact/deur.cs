@@ -4,44 +4,37 @@ using UnityEngine;
 
 public class deur : interactable
 {
-    public int timer = 1;
+    public int timer;
     private float doortimer;
     public GameObject door;
-    public RectTransform buttonTimerBar;
-    public GameObject buttonBar;
+    public GameObject TimerBar;
     private bool open = false;
+    private float ogsize;
 
-    public void Start()
+    private void Start()
     {
-        doortimer = timer;
-        buttonBar.SetActive(false);
+        ogsize = TimerBar.transform.localScale.y;
     }
     public override void interact()
     {
-        buttonBar.SetActive(true);
-        if ( doortimer <= 0)
+        if ( doortimer >= timer)
         {
-            doortimer = 0;
+            doortimer = timer;
             Destroy(door);
             gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-            buttonBar.SetActive(false);
-            open=true;
+            open = true;
         }
         else
         {
-            doortimer -= 1 * Time.deltaTime;
+            doortimer += 1 * Time.deltaTime;
         }
     }
     private void Update()
     {
-        if (Input.GetAxis("Interact") == 0 && doortimer<1 && !open)
+        if (Input.GetAxis("Interact") == 0 && doortimer > 0 && !open)
         {
-            doortimer += 1 * Time.deltaTime;
-            buttonBar.SetActive(false);
+            doortimer -= 1 * Time.deltaTime;
         }
-        print(doortimer);
-
-        buttonTimerBar.sizeDelta = new Vector2(doortimer/timer * 100, buttonTimerBar.sizeDelta.y);
-
+        TimerBar.transform.localScale = new Vector2(TimerBar.transform.localScale.x,ogsize/timer* doortimer);
     }
 }
