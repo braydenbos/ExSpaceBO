@@ -12,6 +12,7 @@ public class distractable : interactable
     private bool activated = false;
     private GameObject pickupobject;
     private GameObject droppoint;
+    private Transform outlet;
 
     public override void interact()
     {
@@ -21,9 +22,10 @@ public class distractable : interactable
             pickup pickupscript = pickupobject.GetComponent<pickup>();
             if (pickupscript.pickedup)
             {
+                outlet = transform.Find("Outlet");
                 pickupobject.transform.parent = null;
-                pickupobject.transform.SetParent(transform);
-                pickupobject.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                pickupobject.transform.SetParent(outlet);
+                pickupobject.transform.position = new Vector3(outlet.position.x, outlet.position.y, outlet.position.z);
                 Destroy(pickupscript);
                 activated = true;
                 timer = 0;
