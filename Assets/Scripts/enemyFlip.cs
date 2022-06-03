@@ -21,7 +21,7 @@ public class enemyFlip : MonoBehaviour
         if(thisFrameX < prefFrameX)
         {
             spriteRenderer.flipX = true;
-        }
+        } 
         else if(thisFrameX > prefFrameX)
         {
             spriteRenderer.flipX = false;

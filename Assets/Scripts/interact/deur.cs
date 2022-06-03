@@ -6,13 +6,23 @@ public class deur : interactable
 {
     public int timer;
     private float doortimer;
-    public GameObject door;
+    private GameObject doorLeft;
+    private GameObject doorRight;
     public GameObject TimerBar;
     private bool open = false;
     private float ogsize;
+    private float opentimer;
+    private float ogPlaceL;
+    private float ogPlaceR;
+
+
 
     private void Start()
     {
+        doorLeft = GameObject.Find("doorLeft");
+        doorRight = GameObject.Find("doorRight");
+        ogPlaceR = doorRight.transform.position.x;
+        ogPlaceL = doorLeft.transform.position.x;
         ogsize = TimerBar.transform.localScale.y;
     }
     public override void interact()
@@ -20,20 +30,29 @@ public class deur : interactable
         if ( doortimer >= timer)
         {
             doortimer = timer;
-            Destroy(door);
             gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             open = true;
         }
         else
         {
-            doortimer += 1 * Time.deltaTime;
+            doortimer += Time.deltaTime;
         }
     }
     private void Update()
     {
         if (Input.GetAxis("Interact") == 0 && doortimer > 0 && !open)
         {
-            doortimer -= 1 * Time.deltaTime;
+            doortimer -=  Time.deltaTime;
+        }
+        if (open && opentimer < 6)
+        {
+            doorLeft.transform.position = new Vector2(ogPlaceL - opentimer, doorLeft.transform.position.y);
+            doorRight.transform.position = new Vector2(ogPlaceR + opentimer, doorRight.transform.position.y);
+            opentimer += 12 * Time.deltaTime;
+        }
+        else if(open && opentimer > 6)
+        {
+            gameObject.GetComponent<EdgeCollider2D>().enabled = false;
         }
         TimerBar.transform.localScale = new Vector2(TimerBar.transform.localScale.x,ogsize/timer* doortimer);
     }

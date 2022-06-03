@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Buttons : MonoBehaviour
+public class buttons : interactable
 {
     public GameObject player;
 
@@ -25,11 +25,15 @@ public class Buttons : MonoBehaviour
     }
     public void restart(int index)
     {
-        SceneManager.LoadScene("World"+ index);
+        SceneManager.LoadScene("World" + index);
     }
     public void escape()
     {
         playerMovement playerscript = player.GetComponent<playerMovement>();
         playerscript.menuOpen = !playerscript.menuOpen;
+    }
+    public override void interact()
+    {
+        mainMenu();
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Distraction
   - Wall
+  - tTower
   layers:
   - Default
   - TransparentFX
