@@ -176,7 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!114 &19988571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,7 +1832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!114 &409612975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2529,7 +2527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!70 &670361667
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3293,7 +3290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!114 &833863757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3535,7 +3531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!1 &909619673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,7 +3668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!114 &932559980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4967,6 +4961,7 @@ GameObject:
   - component: {fileID: 1179205712}
   - component: {fileID: 1179205711}
   - component: {fileID: 1179205717}
+  - component: {fileID: 1179205718}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -4987,8 +4982,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.14}
-  m_Size: {x: 18.25, y: 9.5}
+  m_Offset: {x: 1.08, y: -4.83}
+  m_Size: {x: 18.25, y: 2.85}
   m_Direction: 1
 --- !u!114 &1179205712
 MonoBehaviour:
@@ -5019,10 +5014,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 7
-  height: 1
+  radius: 5.9
+  height: 0.05
   canMove: 1
-  maxSpeed: 0
+  maxSpeed: 12
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -5035,16 +5030,16 @@ MonoBehaviour:
   autoRepath:
     mode: 2
     interval: 0.5
-    sensitivity: 10
+    sensitivity: 20
     maximumInterval: 2
-    visualizeSensitivity: 0
+    visualizeSensitivity: 1
   targetCompatibility: {fileID: 0}
-  maxAcceleration: -2.5
+  maxAcceleration: 20
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
   endReachedDistance: 0.2
-  alwaysDrawGizmos: 0
+  alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
@@ -5153,6 +5148,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ff8aaec682fcf541ab7e395ad06a226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1179205718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179205710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bbac4728caf2c542b6b270ecacbe262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1205202052
@@ -7146,7 +7153,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
