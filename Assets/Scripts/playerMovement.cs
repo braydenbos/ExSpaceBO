@@ -12,6 +12,7 @@ public class playerMovement : MonoBehaviour
     private float moveY;
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer pickedUpSR;
+    private CapsuleCollider2D playercollider;
 
     //sprinting
     private bool isSprinting = false;
@@ -44,13 +45,14 @@ public class playerMovement : MonoBehaviour
         originalSpeed = movementSpeed;
         sprint = maxstam;
         interactableIcon.SetActive(false);
+        playercollider = gameObject.GetComponent<CapsuleCollider2D>();
         //sprite renderer
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        // Pickup
+            // Pickup
         if (Snap.transform.childCount > 0 && !sloweddown)
         {
             pickedUpSR = Snap.transform.GetComponentInChildren<SpriteRenderer>();
@@ -82,6 +84,7 @@ public class playerMovement : MonoBehaviour
         {
             moveX = -1f;
             spriteRenderer.flipX = true;
+            playercollider.offset = new Vector2(-2.1f, playercollider.offset.y);
             if (sloweddown)
             {
                 pickedUpSR.flipX = true;
@@ -91,6 +94,7 @@ public class playerMovement : MonoBehaviour
         {
             moveX = 1f;
             spriteRenderer.flipX = false;
+            playercollider.offset = new Vector2(1.33f,playercollider.offset.y);
             if (sloweddown)
             {
                 pickedUpSR.flipX = false;
@@ -166,7 +170,7 @@ public class playerMovement : MonoBehaviour
 
     private void CheckInteraction()
     {
-        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(new Vector2(transform.position.x, transform.position.y - 3f), boxSize, 0, Vector2.zero);
 
         if(hits.Length > 0)
         {
