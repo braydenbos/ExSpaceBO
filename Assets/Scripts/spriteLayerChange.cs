@@ -39,11 +39,11 @@ public class spriteLayerChange : MonoBehaviour
         {
             sr.sortingOrder = 1;
         }
-        else if (gameObject.transform.position.y < 9 && gameObject.transform.position.y > 4)
+        else if (gameObject.transform.position.y < 9 && gameObject.transform.position.y > 3.4)
         {
             sr.sortingOrder = 3;
         }
-        else if (gameObject.transform.position.y < 4 && gameObject.transform.position.y > -30)
+        else if (gameObject.transform.position.y < 3.4 && gameObject.transform.position.y > -30)
         {
             sr.sortingOrder = 5;
         }

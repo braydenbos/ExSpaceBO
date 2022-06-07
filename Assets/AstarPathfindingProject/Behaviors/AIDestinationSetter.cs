@@ -7,7 +7,7 @@ namespace Pathfinding {
 	[UniqueComponent(tag = "ai.destination")]
 	public class AIDestinationSetter : VersionedMonoBehaviour
 	{
-		public string targettag = "Player";
+		public string targettag = "target";
 		public string prefframe;
 		public Transform target;
 		IAstarAI ai;
@@ -27,7 +27,7 @@ namespace Pathfinding {
 			target = GameObject.FindGameObjectWithTag(targettag).GetComponent<Transform>();
 			if (targettag != prefframe)
             {
-				if (targettag == "Player")
+				if (targettag == "target")
 				{
 					movement.maxSpeed /= 2;
 

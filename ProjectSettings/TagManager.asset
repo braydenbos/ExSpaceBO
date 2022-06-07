@@ -9,6 +9,7 @@ TagManager:
   - Distraction
   - Wall
   - tTower
+  - target
   layers:
   - Default
   - TransparentFX

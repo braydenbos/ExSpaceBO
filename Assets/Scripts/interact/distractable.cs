@@ -49,7 +49,7 @@ public class distractable : interactable
             }
             else
             {
-                targets.targettag = "Player";
+                targets.targettag = "target";
                 activated = false;
                 Destroy(distractable);
             }

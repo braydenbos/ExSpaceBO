@@ -25,7 +25,7 @@ public class distractableT : MonoBehaviour
         {
             if(timer <= 0)
             {
-                targets.targettag = "Player";
+                targets.targettag = "target";
             }
             else
             {
