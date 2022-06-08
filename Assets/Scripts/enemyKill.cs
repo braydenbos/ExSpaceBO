@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemyKill : MonoBehaviour
 {
@@ -11,15 +12,13 @@ public class enemyKill : MonoBehaviour
         {
             if (!shield)
             {
-                print("doei");
-                gameObject.SetActive(false);
+                SceneManager.LoadScene("mainMenu");
             }
             else
             {
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-                print("hallo");
                 shield = false;
-                spriteRenderer.color = Color.yellow;
+                spriteRenderer.color = Color.white;
             }
         }
     }

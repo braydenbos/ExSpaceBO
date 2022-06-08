@@ -10,6 +10,9 @@ public class playerMovement : MonoBehaviour
     private float originalSpeed;
     private float moveX;
     private float moveY;
+    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer pickedUpSR;
+    private CapsuleCollider2D playercollider;
 
     //sprinting
     private bool isSprinting = false;
@@ -28,6 +31,13 @@ public class playerMovement : MonoBehaviour
     private Vector2 boxSize = new Vector2(0.1f, 1f);
     public GameObject Snap;
     public bool sloweddown = false;
+    public Sprite E;
+    public Sprite Square;
+
+    //menu open
+    public bool menuOpen = false;
+    public GameObject menu;
+
 
     void Start()
     {
@@ -35,12 +45,17 @@ public class playerMovement : MonoBehaviour
         originalSpeed = movementSpeed;
         sprint = maxstam;
         interactableIcon.SetActive(false);
+        playercollider = gameObject.GetComponent<CapsuleCollider2D>();
+        //sprite renderer
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+            // Pickup
         if (Snap.transform.childCount > 0 && !sloweddown)
         {
+            pickedUpSR = Snap.transform.GetComponentInChildren<SpriteRenderer>();
             movementSpeed -= 2;
             sloweddown = true;
         }
@@ -49,7 +64,6 @@ public class playerMovement : MonoBehaviour
         {
             movementSpeed += 2;
             sloweddown = false;
-
         }
 
 
@@ -69,14 +83,36 @@ public class playerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         {
             moveX = -1f;
+            spriteRenderer.flipX = true;
+            playercollider.offset = new Vector2(-2.1f, playercollider.offset.y);
+            if (sloweddown)
+            {
+                pickedUpSR.flipX = true;
+            }
         }
         else if (Input.GetAxis("Horizontal") > 0)
         {
             moveX = 1f;
+            spriteRenderer.flipX = false;
+            playercollider.offset = new Vector2(1.33f,playercollider.offset.y);
+            if (sloweddown)
+            {
+                pickedUpSR.flipX = false;
+            }
         }
         else
         {
             moveX = 0f;
+        }
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
+            Icon.sprite = E;
+        }
+        else if (Input.GetAxisRaw("Horizontal") !=0 || Input.GetAxisRaw("Vertical") != 0)
+        {
+            SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
+            Icon.sprite = Square;
         }
 
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
@@ -111,12 +147,18 @@ public class playerMovement : MonoBehaviour
 
         sprintbar.sizeDelta = new Vector2(sprint / maxstam * 100, sprintbar.sizeDelta.y);
 
-        //interacting
+        menu.SetActive(menuOpen);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuOpen = !menuOpen;
+        }
+
         if (Input.GetAxis("Interact") > 0)
         {
             CheckInteraction();
         }
     }
+
     public void OpenInteractableIcon()
     {
         interactableIcon.SetActive(true);
@@ -128,7 +170,7 @@ public class playerMovement : MonoBehaviour
 
     private void CheckInteraction()
     {
-        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(new Vector2(transform.position.x, transform.position.y - 3f), boxSize, 0, Vector2.zero);
 
         if(hits.Length > 0)
         {

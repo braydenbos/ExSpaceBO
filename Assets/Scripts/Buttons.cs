@@ -5,8 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    public void ToStart()
+    public GameObject player;
+
+    public void toStart(int index)
     {
-        SceneManager.LoadScene("wiresToAndFrom");
+        SceneManager.LoadScene("World" + index);
+    }
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("mainMenu");
+    }
+    public void Options()
+    {
+        SceneManager.LoadScene("mainMenu");
+    }
+    public void restart(int index)
+    {
+        SceneManager.LoadScene("World" + index);
+    }
+    public void escape()
+    {
+        playerMovement playerscript = player.GetComponent<playerMovement>();
+        playerscript.menuOpen = !playerscript.menuOpen;
     }
 }
