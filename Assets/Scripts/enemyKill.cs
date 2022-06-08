@@ -12,13 +12,11 @@ public class enemyKill : MonoBehaviour
         {
             if (!shield)
             {
-                print("doei");
                 SceneManager.LoadScene("mainMenu");
             }
             else
             {
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-                print("hallo");
                 shield = false;
                 spriteRenderer.color = Color.white;
             }

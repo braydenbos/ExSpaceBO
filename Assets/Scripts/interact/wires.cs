@@ -5,8 +5,6 @@ using UnityEngine;
 public class wires : MonoBehaviour
 {
     private LineRenderer lR;
-    private Transform from;
-    private Transform to;
     [SerializeField] public Transform gen;
     [SerializeField] public Transform connect;
 

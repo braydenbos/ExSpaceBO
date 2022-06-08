@@ -11,7 +11,7 @@ public class enemyFlip : MonoBehaviour
     void Start()
     {
         prefFrameX = transform.position.x;
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class enemyFlip : MonoBehaviour
         if(thisFrameX < prefFrameX)
         {
             spriteRenderer.flipX = true;
-        }
+        } 
         else if(thisFrameX > prefFrameX)
         {
             spriteRenderer.flipX = false;
