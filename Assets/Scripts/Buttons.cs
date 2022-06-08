@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class buttons : interactable
+public class Buttons : MonoBehaviour
 {
     public GameObject player;
 
@@ -31,9 +31,5 @@ public class buttons : interactable
     {
         playerMovement playerscript = player.GetComponent<playerMovement>();
         playerscript.menuOpen = !playerscript.menuOpen;
-    }
-    public override void interact()
-    {
-        mainMenu();
     }
 }
