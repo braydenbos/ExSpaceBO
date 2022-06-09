@@ -6,7 +6,7 @@ public abstract class interactable : MonoBehaviour
 {
     private void Reset()
     {
-        GetComponent<Collider2D>().isTrigger = true;
+        GetComponent<CapsuleCollider2D>().isTrigger = true;
     }
     public abstract void interact();
 

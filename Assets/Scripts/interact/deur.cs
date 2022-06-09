@@ -8,7 +8,9 @@ public class deur : interactable
     private float doortimer;
     private GameObject doorLeft;
     private GameObject doorRight;
+    public GameObject distraction;
     public GameObject TimerBar;
+    public Sprite lightGreen;
     private bool open = false;
     private float ogsize;
     private float opentimer;
@@ -44,11 +46,15 @@ public class deur : interactable
         {
             doortimer -=  Time.deltaTime;
         }
-        if (open && opentimer < 6)
+        if (distraction.GetComponent<distractable>().Switch)
         {
-            doorLeft.transform.position = new Vector2(ogPlaceL - opentimer, doorLeft.transform.position.y);
-            doorRight.transform.position = new Vector2(ogPlaceR + opentimer, doorRight.transform.position.y);
-            opentimer += 12 * Time.deltaTime;
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = lightGreen;
+            if (open && opentimer < 6)
+            {
+                doorLeft.transform.position = new Vector2(ogPlaceL - opentimer, doorLeft.transform.position.y);
+                doorRight.transform.position = new Vector2(ogPlaceR + opentimer, doorRight.transform.position.y);
+                opentimer += 12 * Time.deltaTime;
+            }
         }
         else if(open && opentimer > 6)
         {

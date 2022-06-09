@@ -4,17 +4,28 @@ using UnityEngine;
 
 public class wires : MonoBehaviour
 {
-    private LineRenderer lR;
-    [SerializeField] public Transform gen;
-    [SerializeField] public Transform connect;
+    LineRenderer lR;
+    [SerializeField] List<Transform> nodes;
+
 
     private void Awake()
     {
         lR = GetComponent<LineRenderer>();
+        lR.positionCount = nodes.Count;
+
     }
     private void Update()
     {
-        lR.SetPosition(0, gen.position);
-        lR.SetPosition(1, connect.position);
+        lR.SetPositions(nodes.ConvertAll(n => n.position - new Vector3(0, 0, 5)).ToArray());
+    }
+    public Vector3[] GetPositions()
+    {
+        Vector3[] positions = new Vector3[lR.positionCount];
+        lR.GetPositions(positions);
+        return positions;
+    }
+    public float GetWidth()
+    {
+        return lR.startWidth;
     }
 }
