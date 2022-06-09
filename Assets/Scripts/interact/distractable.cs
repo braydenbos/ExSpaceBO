@@ -39,7 +39,7 @@ public class distractable : interactable
                 pickupobject.GetComponent<SpriteRenderer>().sortingOrder = 4;
                 pickupobject.GetComponent<SpriteRenderer>().flipX = true;
                 pickupobject.transform.SetParent(outlet.transform);
-                pickupobject.transform.position = new Vector2(1.55f, outlet.transform.position.y);
+                pickupobject.transform.position = new Vector2(outlet.transform.position.x, outlet.transform.position.y);
                 Destroy(pickupobject.GetComponent<pickup>());
                 activated = true;
                 timer = 0;
