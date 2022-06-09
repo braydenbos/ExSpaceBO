@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
+
+
+    private Animator animator;
     //movement
     public float movementSpeed;
     private float originalSpeed;
@@ -48,6 +51,7 @@ public class playerMovement : MonoBehaviour
         playercollider = gameObject.GetComponent<CapsuleCollider2D>();
         //sprite renderer
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -84,7 +88,7 @@ public class playerMovement : MonoBehaviour
         {
             moveX = -1f;
             spriteRenderer.flipX = true;
-            playercollider.offset = new Vector2(-2.1f, playercollider.offset.y);
+            playercollider.offset = new Vector2(-0.2f, playercollider.offset.y);
             if (sloweddown)
             {
                 pickedUpSR.flipX = true;
@@ -94,7 +98,7 @@ public class playerMovement : MonoBehaviour
         {
             moveX = 1f;
             spriteRenderer.flipX = false;
-            playercollider.offset = new Vector2(1.33f,playercollider.offset.y);
+            playercollider.offset = new Vector2(0.2f,playercollider.offset.y);
             if (sloweddown)
             {
                 pickedUpSR.flipX = false;
@@ -103,6 +107,14 @@ public class playerMovement : MonoBehaviour
         else
         {
             moveX = 0f;
+        }
+        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            animator.SetBool("walking", true);
+        }
+        else
+        {
+            animator.SetBool("walking", false);
         }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
@@ -129,6 +141,11 @@ public class playerMovement : MonoBehaviour
         {
             sprint -= stamdown * Time.deltaTime;
             sprintcool = 0;
+            animator.SetBool("sprinting", true);
+        }
+        else
+        {
+            animator.SetBool("sprinting", false);
         }
         if (!isSprinting && sprint < maxstam)
         {
