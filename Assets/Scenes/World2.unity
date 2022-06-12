@@ -393,10 +393,10 @@ RectTransform:
   m_Father: {fileID: 110072298}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: -220}
+  m_SizeDelta: {x: 850, y: 804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40263803
 MonoBehaviour:
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6264151, g: 0.9526648, b: 1, a: 1}
+  m_Color: {r: 0.627451, g: 0.48235294, b: 0.48235294, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2040,8 +2040,8 @@ Camera:
   m_GameObject: {fileID: 382687595}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2295,7 +2295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 229}
+  m_AnchoredPosition: {x: -0.000061035156, y: 229}
   m_SizeDelta: {x: 470, y: 183.1591}
   m_Pivot: {x: 0.5000001, y: 0.5}
 --- !u!114 &409612974
@@ -2867,8 +2867,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539403121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.204846, y: -4.8887863, z: -135.81348}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 9.76, y: -5.14, z: -135.81348}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1782515687}
@@ -3445,7 +3445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673252299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.57, y: -6.9, z: 0}
+  m_LocalPosition: {x: 7.57, y: -2.87, z: 0}
   m_LocalScale: {x: 0.12, y: 0.25, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3633,7 +3633,7 @@ ParticleSystem:
   m_GameObject: {fileID: 679449238}
   serializedVersion: 8
   lengthInSec: 0.05
-  simulationSpeed: 1
+  simulationSpeed: 0.125
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -3707,7 +3707,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -3817,32 +3817,32 @@ ParticleSystem:
       maxColor: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
-        key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 65535
-        ctime2: 0
-        ctime3: 0
-        ctime4: 0
-        ctime5: 0
-        ctime6: 0
-        ctime7: 0
+        key0: {r: 0, g: 0, b: 0, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 1}
+        key2: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
+        key3: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 0}
+        key4: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0}
+        key5: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 0}
+        key6: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 0}
+        key7: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
+        ctime0: 8192
+        ctime1: 16384
+        ctime2: 24576
+        ctime3: 32768
+        ctime4: 40959
+        ctime5: 49151
+        ctime6: 57343
+        ctime7: 65535
         atime0: 0
-        atime1: 65535
+        atime1: 6554
         atime2: 0
         atime3: 0
         atime4: 0
         atime5: 0
         atime6: 0
         atime7: 0
-        m_Mode: 0
-        m_NumColorKeys: 2
+        m_Mode: 1
+        m_NumColorKeys: 8
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
@@ -4192,7 +4192,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 240
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -4258,7 +4258,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0
     donutRadius: 0.2
-    m_Position: {x: 35.4, y: 0, z: 0}
+    m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: -90}
     m_Scale: {x: 165, y: 90.5, z: 1}
     placementMode: 0
@@ -4458,7 +4458,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 80
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4568,7 +4568,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 1
+      scalar: 0.008410983
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4576,20 +4576,20 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 9.387181
-          outSlope: 9.387181
+          inSlope: 823.3774
+          outSlope: 823.3774
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
-          outWeight: 0.023539303
+          outWeight: 0.00058038527
         - serializedVersion: 3
-          time: 0.06473506
-          value: 1
-          inSlope: 0.69325745
-          outSlope: 0.69325745
+          time: 1
+          value: 0
+          inSlope: -381.203
+          outSlope: -381.203
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.100042045
+          inWeight: 0.0011607409
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -5081,7 +5081,7 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -3
+      scalar: -16
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -6275,7 +6275,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.46
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -6328,7 +6328,7 @@ ParticleSystem:
     strengthY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.25
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -6431,7 +6431,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    separateAxes: 0
+    separateAxes: 1
     frequency: 0.76
     damping: 1
     octaves: 1
@@ -8339,7 +8339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679449238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.9951544, y: 34.551212, z: -135.81348}
+  m_LocalPosition: {x: 6.9, y: 40.5, z: -135.81348}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8555,7 +8555,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.27, y: 2.19}
+  m_Offset: {x: -2.27, y: 2.18}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8566,7 +8566,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12, y: 0.86}
+  m_Size: {x: 0.12, y: 0.83}
   m_EdgeRadius: 0
 --- !u!61 &704554279
 BoxCollider2D:
@@ -8581,7 +8581,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.76, y: -2.26}
+  m_Offset: {x: 1.76, y: -2.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8592,7 +8592,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13, y: 1.5}
+  m_Size: {x: 0.13, y: 1.4}
   m_EdgeRadius: 0
 --- !u!61 &704554280
 BoxCollider2D:
@@ -8633,7 +8633,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.06, y: 0.6}
+  m_Offset: {x: 1.03, y: 0.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8644,7 +8644,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.42, y: 0.13}
+  m_Size: {x: 1.38, y: 0.13}
   m_EdgeRadius: 0
 --- !u!1 &779463226
 GameObject:
@@ -8867,7 +8867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809278951}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.689999, y: 36, z: 0}
+  m_LocalPosition: {x: -26.86, y: 35.48, z: 0}
   m_LocalScale: {x: 1.5, y: 2, z: 0.56941915}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9146,7 +9146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 72.42047}
+  m_AnchoredPosition: {x: -0.000061035156, y: 72.42047}
   m_SizeDelta: {x: 470, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &903142285
@@ -11253,8 +11253,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296559547}
   m_LocalRotation: {x: 0, y: 0, z: 0.43758664, w: 0.8991763}
-  m_LocalPosition: {x: 9.04, y: -4.5, z: -135.81348}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 9.644099, y: -4.8361974, z: -135.81348}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1782515687}
@@ -11996,7 +11996,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12, y: 1.31}
+  m_Size: {x: 0.12, y: 1.11}
   m_EdgeRadius: 0
 --- !u!1 &1459559655
 GameObject:
@@ -12056,8 +12056,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505929901}
   m_LocalRotation: {x: 0, y: -0, z: 0.23089851, w: -0.9729779}
-  m_LocalPosition: {x: 7.08, y: -4.53, z: -135.81348}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 8.2659, y: -4.8596973, z: -135.81348}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1782515687}
@@ -12720,7 +12720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752901462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.289999, y: -37.3, z: 0}
+  m_LocalPosition: {x: -20.23, y: -38.48, z: 0}
   m_LocalScale: {x: 1.5, y: 2, z: 0.56941915}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12977,7 +12977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIezgx4pAbwIAACkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzk3GJoCht5YQ0kMSJrSTiy+KtcYaZMkjyQGS4b93V7axS08sb7/evl35i0ntKsi8sWsrxZMRwL6PGNns26h3PsKR74zeyk/oYt6k8AUF8RDzyr00iMeU5kwJ3srsh94pCo4QrLXMjS1XYgdL47xDOOfKAbqs8ZStEfoasSP+3Cwo5YTWOCHrE61FNDqjmYH2YAeh09tkvFjMx3fzNiW5nbYpTUatM8XLCgTR7xPjKAqBlBLPsMo0RGucrw2MEKOORinpWn7Mn6ow/7YqwAIJICTHcQOn+DYhAQqQu8IT+2H6S5478K0clp/upUXhmrrsp2nULLnbNxw/uKqp0zzQako+/ee9iYM7t6Z87LriZAj5Qmb7V37KuPMDsYfw/YB5EOrA1Z6/K3grQD+btTW1Fuj0tqbU2sH4vv97GWxZQLbv8YbqFVhXvfLdbrvN0gznMPtxqWT5HqSfNMBWmaB3OAiwuJxfSDici2tLIEos/jj4zXfDu2odD9I6j652Sk303k1tKZStgmY0Te2XxmoIcEu6As2VP22wjL9e4JVv0PbK88DpBbXNW1/3MK5SAtzHR9GVa2MOl2W5whyewBUvtVdSQ0+aHM+o09Jo3dzXUJMubVvbnGdDDrtain9vi/HJTESzJEkmd1Eyi5ObmC9gOo/yySIWEOfAwvFJjYNytWmYtvrg2nRPSuOhdV+W0dryKhy7sPywlp+lGWgudW62mQXQL02FC3Ow2ARfplgJiQptwXupw8LZV8qUyfYg0kuhNIy6OnrL075Kyir5YTwhKVuGT0nKCL4c88bCh4QDNe+Kndn5L1BLAwQUAAAICAAACCHs82BAwG0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0UqKJWYqBmbm5uYmxgbmZobmuYaJlqqmFQZqJpWFKqmFaqlIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHs4MeKQG8CAAApBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHs82BAwG0AAAB4AAAACQAkAAAAAAAAAAAAAAC8AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHQDAAAAAA==
+    dataString: UEsDBBQAAAgIAAAIIexOHk06cQIAACkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzg1jA8G4txYI6SEJE9rJxRfFWmMNsuSR5ADJ8N+7kmXsUl8sv/16+3blL8KlqSG3Sm80Z0+KAfk+Iu5Mvo164yOc6F7JHf+EzueNM1s6J+p9XqnlCvHYhRlVgdU8/yH3wjlHCDaSF0pXa7aHpTLWIFxQYQBNWlkXLRH6GpETvu5SF3LG0yRxp088pdHogsccpAU9cL0fJ5M0XUymixCSjO9DSBvRyFzQqgbm6PeB6TT4x/NkPIvwSb27xAaDZzSeu4pKCG4CP2LPte9/V5egwQnAOMV2Pad4nDgBSuD70jr2w/CXojBggxyanldco3BtXvJTtWpW1Bxajh9UNK7SwrNqUz79Z72LvbnQqnrsqsaRq2BLnh9e6Tmnxg7EHsKrAXMv1JGKA30X8FaCfFYbrRrJ0Gh140IbA5NV/3ltbFlCfujxluoN2NS98t1su8m6Hi6+99NS8OrdKz9rgZ1QXm+/EKBxNr+QsF8XE1Ig6lj8MfCb7od7FQwPXBuLptCldPTeVaOdK1l7zVw3jV0qLcHDgXQNkgp73mIaezvAG9ug7I3lgbobFIoHW3cxbkI83PtH0Y1pq47XYZlSHZ/AlC+NFVxCT9oZnlGnpZKy3a+hJl3YrtEFzYcc9g1n/+4WobM5i+ZJksymUTKPk7uYpnC/iIpZGjOICyB++bjERqnYtkyDPjg22ZOSuGjdn2W00bT2y840PW74Z6UGmnNZqF2uAeRLm+HKHDQWwYvJ1oyjQjuwlks/cPKVEaHyA7Dsmijzra5PVtOsz5KRmn8o65CMLP2vJCMOvi7zVsMHh6Mr3iW7kMtfUEsDBBQAAAgIAAAIIezzYEDAbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSoolZioGZubm5ibGBuZmhua5homWqqYVBmomlYUqqYVqqUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIexOHk06cQIAACkFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIezzYEDAbQAAAHgAAAAJACQAAAAAAAAAAAAAAL4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -13206,7 +13206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 21
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8941177, g: 0.8941177, b: 0.8941177, a: 1}
   m_FlipX: 0
@@ -13601,7 +13601,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4, y: 3.2}
+  m_Size: {x: 2.32, y: 2.9}
   m_EdgeRadius: 0
 --- !u!114 &1927290954
 MonoBehaviour:

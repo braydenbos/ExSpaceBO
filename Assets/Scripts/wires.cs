@@ -25,7 +25,7 @@ public class wires : MonoBehaviour
     private void DetectCollisionEnter()
     {
         RaycastHit hit;
-        if (Physics.Linecast(to2.position, rope.GetPosition(ropePositions.Count - 2) , out hit, collMask) && Physics.Linecast(to.position, rope.GetPosition(ropePositions.Count - 2), out hit, collMask))
+        if (Physics.Linecast(to.position, rope.GetPosition(ropePositions.Count - 2), out hit, collMask))
         {
             if (rope.GetPosition(ropePositions.Count - 2) != hit.point)
             {
