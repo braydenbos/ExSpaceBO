@@ -7,6 +7,7 @@ public class spriteLayerChange : MonoBehaviour
     private SpriteRenderer sr;
     private GameObject snap;
     public GameObject Enemy;
+    public LineRenderer lr;
     private SpriteRenderer SREnemy;
     private SpriteRenderer srChild;
     public int minus;
@@ -25,37 +26,37 @@ public class spriteLayerChange : MonoBehaviour
     void Update()
     {
         //layer to location
-        if (gameObject.transform.position.y > 72 - minus)
+        if (gameObject.transform.position.y > 69 - minus)
         {
-            layer = 2;
+            layer = 4;
         }
-        else if (gameObject.transform.position.y < 72 - minus && gameObject.transform.position.y > 46 - minus)
-        {
-            layer = 6;
-        }
-        else if (gameObject.transform.position.x < -20 && gameObject.transform.position.y > 12 - minus)
-        {
-            layer = 6;
-        }
-        else if (gameObject.transform.position.y < 46 - minus && gameObject.transform.position.y > 16.5 - minus)
-        {
-            layer = 5;
-        }
-        else if (gameObject.transform.position.y < 16.5 - minus && gameObject.transform.position.y > 9 - minus)
-        {
-            layer = 2;
-        }
-        else if (gameObject.transform.position.y < 9 - minus && gameObject.transform.position.y > 3.4 - minus)
+        else if (gameObject.transform.position.y < 69 - minus && gameObject.transform.position.y > 46 - minus)
         {
             layer = 7;
         }
+        else if (gameObject.transform.position.x < -20 && gameObject.transform.position.y > 12 - minus)
+        {
+            layer = 30;
+        }
+        else if (gameObject.transform.position.y < 46 - minus && gameObject.transform.position.y > 16.5 - minus)
+        {
+            layer = 27;
+        }
+        else if (gameObject.transform.position.y < 16.5 - minus && gameObject.transform.position.y > 8 - minus)
+        {
+            layer = 20;
+        }
+        else if (gameObject.transform.position.y < 8 - minus && gameObject.transform.position.y > 3.4 - minus)
+        {
+            layer = 27;
+        }
         else if (gameObject.transform.position.y < 3.4 - minus && gameObject.transform.position.y > -30 - minus)
         {
-            layer = 11;
+            layer = 35;
         }
         else if (gameObject.transform.position.y < -30 - minus)
         {
-            layer = 17;
+            layer = 45;
         }
         // enemy compair player
         if (Enemy.transform.position.y > transform.position.y)

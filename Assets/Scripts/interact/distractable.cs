@@ -7,7 +7,7 @@ using UnityEngine;
 public class distractable : interactable
 {
     private GameObject Enemy;
-    private GameObject Player;
+    private trigger trigger;
     private GameObject pickupobject;
     private GameObject droppoint;
     private GameObject outlet;
@@ -23,9 +23,11 @@ public class distractable : interactable
     {
         timer = timertimeT;
         Enemy = GameObject.Find("Enemy");
-        Player = GameObject.Find("Player");
         droppoint = GameObject.Find("genarator");
         tTower = GameObject.Find("tTower");
+        AIDestinationSetter targets = Enemy.GetComponent<AIDestinationSetter>();
+        targets.targettag = tTower.tag;
+
     }
     public override void interact()
     {
@@ -36,10 +38,10 @@ public class distractable : interactable
             {
                 outlet = GameObject.Find("Outlet");
                 pickupobject.transform.parent = null;
-                pickupobject.GetComponent<SpriteRenderer>().sortingOrder = 4;
+                pickupobject.GetComponent<SpriteRenderer>().sortingOrder = 23;
                 pickupobject.GetComponent<SpriteRenderer>().flipX = true;
                 pickupobject.transform.SetParent(outlet.transform);
-                pickupobject.transform.position = new Vector2(outlet.transform.position.x, outlet.transform.position.y);
+                pickupobject.transform.position = new Vector2(outlet.transform.position.x + 0.75f, outlet.transform.position.y);
                 Destroy(pickupobject.GetComponent<pickup>());
                 activated = true;
                 timer = 0;
@@ -50,25 +52,25 @@ public class distractable : interactable
     private void Update()
     {
         AIDestinationSetter targets = Enemy.GetComponent<AIDestinationSetter>();
-        //distraction tutoriel
-        if (Player.transform.position.y > -30)
+        if (transform.childCount == 2)
         {
-            triggered = true;
-        }
-        if (!triggered)
-        {
-            targets.targettag = tTower.tag;
-        }
-        else
-        {
-            if (timer <= 0)
+            trigger = transform.GetChild(1).gameObject.GetComponent<trigger>();
+            //distraction tutoriel
+            if (trigger.triggered || triggered)
             {
-                targets.targettag = "target";
+                triggered = true;
+                if (timer <= 0)
+                {
+                    targets.targettag = "target";
+                    triggered = true;
+                    Destroy(transform.GetChild(1).gameObject);
+                }
+                else
+                {
+                    timer -= Time.deltaTime;
+                }
             }
-            else
-            {
-                timer -= Time.deltaTime;
-            }
+
         }
         //real distraction
         if (activated && droppoint.GetComponent<droppointGen>().activated)
@@ -83,7 +85,6 @@ public class distractable : interactable
             {
                 targets.targettag = "target";
                 activated = false;
-                Destroy(GetComponent<distractable>());
             }
         }
     }
