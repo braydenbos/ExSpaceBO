@@ -3076,7 +3076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5078fd76fcda77944a889ed12b6ae9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timertimeT: 0
   timertime: 5
+  Switch: 0
 --- !u!70 &809278953
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3168,7 +3170,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &809278956
@@ -3928,8 +3930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4bbe31c6473abb46bc8224c69a7439a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gen: {fileID: 951896803}
-  connect: {fileID: 673252300}
+  nodes: []
 --- !u!120 &951896805
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -4840,8 +4841,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130363854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.8900003, y: -7.0680003, z: 0}
-  m_LocalScale: {x: 0.9850001, y: 1, z: 1}
+  m_LocalPosition: {x: -7.16, y: -7.77, z: 0}
+  m_LocalScale: {x: 2.3866553, y: 2.423, z: 2.423}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 423616192}
@@ -6062,6 +6063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bbac4728caf2c542b6b270ecacbe262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enemy: {fileID: 0}
+  minus: 0
 --- !u!70 &1683863118
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6307,7 +6310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9dbaf21bfe230479f330f62caf597b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timertime: 5
 --- !u!61 &1752901465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6383,7 +6385,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1752901467
@@ -6871,6 +6873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bbac4728caf2c542b6b270ecacbe262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enemy: {fileID: 0}
+  minus: 0
 --- !u!95 &1891103296
 Animator:
   serializedVersion: 4
@@ -7284,7 +7288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 1
+  distraction: {fileID: 0}
   TimerBar: {fileID: 274114118}
+  lightGreen: {fileID: 0}
 --- !u!70 &2054678363
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

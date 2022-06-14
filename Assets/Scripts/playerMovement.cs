@@ -8,6 +8,7 @@ public class playerMovement : MonoBehaviour
 
 
     private Animator animator;
+    private float Timer;
     //movement
     public float movementSpeed;
     private float originalSpeed;
@@ -114,7 +115,16 @@ public class playerMovement : MonoBehaviour
         }
         else
         {
-            animator.SetBool("walking", false);
+            if (Timer < 0.01)
+            {
+                Timer += Time.deltaTime;
+            }
+            else
+            {
+                Timer = 0;
+                animator.SetBool("walking", false);
+            }
+            
         }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
