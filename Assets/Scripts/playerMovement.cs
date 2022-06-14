@@ -61,33 +61,31 @@ public class playerMovement : MonoBehaviour
         if (Snap.transform.childCount > 0 && !sloweddown)
         {
             pickedUpSR = Snap.transform.GetComponentInChildren<SpriteRenderer>();
-            movementSpeed -= 2;
+            if(originalSpeed == movementSpeed)
+            {
+                movementSpeed -= 2;
+                originalSpeed = movementSpeed;
+            }
+            else
+            {
+                originalSpeed -= 2;
+            }
             sloweddown = true;
         }
         else if(Snap.transform.childCount < 1 && sloweddown)
 
         {
             movementSpeed += 2;
+            originalSpeed = movementSpeed;
             sloweddown = false;
         }
 
 
         // Walking
-        if (Input.GetAxis("Vertical") > 0)
-        {
-            moveY = 1f;
-        }
-        else if (Input.GetAxis("Vertical") < 0)
-        {
-            moveY = -1f;
-        }
-        else
-        {
-            moveY = 0f;
-        }
+        moveY = Input.GetAxis("Vertical");
+        moveX = Input.GetAxis("Horizontal");
         if (Input.GetAxis("Horizontal") < 0)
         {
-            moveX = -1f;
             spriteRenderer.flipX = true;
             playercollider.offset = new Vector2(-0.2f, playercollider.offset.y);
             if (sloweddown)
@@ -97,7 +95,6 @@ public class playerMovement : MonoBehaviour
         }
         else if (Input.GetAxis("Horizontal") > 0)
         {
-            moveX = 1f;
             spriteRenderer.flipX = false;
             playercollider.offset = new Vector2(0.2f,playercollider.offset.y);
             if (sloweddown)
@@ -105,6 +102,7 @@ public class playerMovement : MonoBehaviour
                 pickedUpSR.flipX = false;
             }
         }
+<<<<<<< HEAD
         else
         {
             moveX = 0f;
@@ -127,6 +125,9 @@ public class playerMovement : MonoBehaviour
             
         }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+=======
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow))
+>>>>>>> main
         {
             SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
             Icon.sprite = E;
@@ -141,7 +142,7 @@ public class playerMovement : MonoBehaviour
         transform.position += movementSpeed * Time.deltaTime * moveDir;
 
         // Sprinting
-        if (Input.GetAxis("Sprint") > 0 &&!isSprinting )
+        if (Input.GetAxis("Sprint") > 0 && !isSprinting)
         {
             originalSpeed = movementSpeed;
             movementSpeed *= speedmultiplier;
@@ -157,23 +158,24 @@ public class playerMovement : MonoBehaviour
         {
             animator.SetBool("sprinting", false);
         }
-        if (!isSprinting && sprint < maxstam)
+        if (sprintcool >= 0.8 && sprint < maxstam)
         {
             sprint += stamup * Time.deltaTime;
         }
-        if (sprint <= 0 || Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.Joystick1Button1) || sprintcool > 0 )
+        else if(sprint >= maxstam)
+        {
+            sprintcool = 0;
+        }
+        if (sprint <= 0 || Input.GetAxis("Sprint") == 0 || sprintcool > 0 )
         {
             movementSpeed = originalSpeed;
             sprintcool += 1 * Time.deltaTime;
-            if (sprintcool >= 0.8)
-            {
-                isSprinting = false;
-                sprintcool = 0;
-            }
+            isSprinting = false;
         }
 
         sprintbar.sizeDelta = new Vector2(sprint / maxstam * 100, sprintbar.sizeDelta.y);
 
+        //menu
         menu.SetActive(menuOpen);
         if (Input.GetKeyDown(KeyCode.Escape))
         {

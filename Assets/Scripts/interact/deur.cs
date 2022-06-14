@@ -33,6 +33,7 @@ public class deur : interactable
         {
             doortimer = timer;
             gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+            transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = lightGreen;
             open = true;
         }
         else
@@ -53,6 +54,7 @@ public class deur : interactable
             {
                 doorLeft.transform.position = new Vector2(ogPlaceL - opentimer, doorLeft.transform.position.y);
                 doorRight.transform.position = new Vector2(ogPlaceR + opentimer, doorRight.transform.position.y);
+                Destroy(GetComponent<EdgeCollider2D>());
                 opentimer += 12 * Time.deltaTime;
             }
         }
