@@ -102,7 +102,6 @@ public class playerMovement : MonoBehaviour
                 pickedUpSR.flipX = false;
             }
         }
-<<<<<<< HEAD
         else
         {
             moveX = 0f;
@@ -124,10 +123,7 @@ public class playerMovement : MonoBehaviour
             }
             
         }
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-=======
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow))
->>>>>>> main
         {
             SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
             Icon.sprite = E;
