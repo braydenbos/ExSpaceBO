@@ -50,10 +50,13 @@ public class deur : interactable
         if (distraction.GetComponent<distractable>().Switch)
         {
             transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = lightGreen;
-            if (open && opentimer < 6)
+            if (open && opentimer < 8)
             {
-                doorLeft.transform.position = new Vector2(ogPlaceL - opentimer, doorLeft.transform.position.y);
-                doorRight.transform.position = new Vector2(ogPlaceR + opentimer, doorRight.transform.position.y);
+                doorLeft.transform.position = new Vector2(ogPlaceL - opentimer / 1.5f, doorLeft.transform.position.y);
+                if(opentimer < 3.5)
+                {
+                    doorRight.transform.position = new Vector2(ogPlaceR + opentimer, doorRight.transform.position.y);
+                }
                 Destroy(GetComponent<EdgeCollider2D>());
                 opentimer += 12 * Time.deltaTime;
             }

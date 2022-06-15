@@ -4,7 +4,6 @@ using UnityEngine;
 public class wires : MonoBehaviour
 {
     public Transform to;
-    public Transform to2;
     public Transform from;
     private LineRenderer rope;
     public LayerMask collMask;
@@ -45,7 +44,7 @@ public class wires : MonoBehaviour
     private void AddPosToRope(Vector2 _pos)
     {
         ropePositions.Add(_pos);
-        ropePositions.Add(to2.position);
+        ropePositions.Add(to.position);
     }
     private void UpdateRopePositions()
     {

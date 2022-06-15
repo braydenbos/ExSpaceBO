@@ -66,6 +66,7 @@ public class playerMovement : MonoBehaviour
                 originalSpeed -= 2;
             }
             sloweddown = true;
+            Snap.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
         }
         else if(Snap.transform.childCount < 1 && sloweddown)
 

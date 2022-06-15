@@ -10,6 +10,7 @@ public class spriteLayerChange : MonoBehaviour
     public LineRenderer lr;
     private SpriteRenderer SREnemy;
     private SpriteRenderer srChild;
+    private SpriteRenderer srChild2;
     public int minus;
     private int layer;
     private bool plus;
@@ -90,7 +91,9 @@ public class spriteLayerChange : MonoBehaviour
         if (gameObject.name == "Player" && snap.transform.childCount == 1)
         {
             srChild = snap.transform.GetChild(0).GetComponent<SpriteRenderer>();
-            srChild.sortingOrder = sr.sortingOrder + 1;
+            srChild2 = srChild.transform.GetChild(0).GetComponent<SpriteRenderer>();
+            srChild.sortingOrder = sr.sortingOrder + 2;
+            srChild2.sortingOrder = sr.sortingOrder + 1;
         }
 
     }
