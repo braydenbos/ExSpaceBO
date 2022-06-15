@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
+    private Animator animator;
+    private float Timer;
     //movement
     public float movementSpeed;
     private float originalSpeed;
@@ -48,6 +50,8 @@ public class playerMovement : MonoBehaviour
         playercollider = gameObject.GetComponent<CapsuleCollider2D>();
         //sprite renderer
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -83,7 +87,7 @@ public class playerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         {
             spriteRenderer.flipX = true;
-            playercollider.offset = new Vector2(-2.1f, playercollider.offset.y);
+            playercollider.offset = new Vector2(-0.52f, playercollider.offset.y);
             if (sloweddown)
             {
                 pickedUpSR.flipX = true;
@@ -92,14 +96,36 @@ public class playerMovement : MonoBehaviour
         else if (Input.GetAxis("Horizontal") > 0)
         {
             spriteRenderer.flipX = false;
-            playercollider.offset = new Vector2(1.33f,playercollider.offset.y);
+            playercollider.offset = new Vector2(0.58f, playercollider.offset.y);
             if (sloweddown)
             {
                 pickedUpSR.flipX = false;
             }
         }
+        else
+        {
+            moveX = 0f;
+        }
+        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            animator.SetBool("walking", true);
+        }
+        else
+        {
+            if (Timer < 0.01)
+            {
+                Timer += Time.deltaTime;
+            }
+            else
+            {
+                Timer = 0;
+                animator.SetBool("walking", false);
+            }
+            
+        }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow))
         {
+            animator.SetBool("walking", true);
             SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
             Icon.sprite = E;
         }
@@ -107,6 +133,11 @@ public class playerMovement : MonoBehaviour
         {
             SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
             Icon.sprite = Square;
+            animator.SetBool("walking", true);
+        }
+        else
+        {
+            animator.SetBool("walking", false);
         }
 
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
@@ -123,6 +154,11 @@ public class playerMovement : MonoBehaviour
         {
             sprint -= stamdown * Time.deltaTime;
             sprintcool = 0;
+            animator.SetBool("sprinting", true);
+        }
+        else
+        {
+            animator.SetBool("sprinting", false);
         }
         if (sprintcool >= 0.8 && sprint < maxstam)
         {
@@ -138,6 +174,7 @@ public class playerMovement : MonoBehaviour
             sprintcool += 1 * Time.deltaTime;
             isSprinting = false;
         }
+        animator.SetBool("sprinting", isSprinting);
 
         sprintbar.sizeDelta = new Vector2(sprint / maxstam * 100, sprintbar.sizeDelta.y);
 

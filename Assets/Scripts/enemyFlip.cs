@@ -4,28 +4,39 @@ using UnityEngine;
 
 public class enemyFlip : MonoBehaviour
 {
-    private float thisFrameX;
-    private float prefFrameX;
+    private Animator animator;
+    private Vector2 thisFrame;
+    private Vector2 prefFrame;
     private SpriteRenderer spriteRenderer;
+
 
     void Start()
     {
-        prefFrameX = transform.position.x;
+        prefFrame = transform.position;
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        animator = transform.GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        thisFrameX = transform.position.x;
-        if(thisFrameX < prefFrameX)
+        thisFrame = transform.position;
+        if(thisFrame.x < prefFrame.x)
         {
             spriteRenderer.flipX = true;
         } 
-        else if(thisFrameX > prefFrameX)
+        else if(thisFrame.x > prefFrame.x)
         {
             spriteRenderer.flipX = false;
         }
-        prefFrameX = transform.position.x;
+        if(thisFrame != prefFrame)
+        {
+            animator.SetBool("walking",true);
+        }
+        else
+        {
+            animator.SetBool("walking", false);
+        }
+        prefFrame = transform.position;
     }
 }
