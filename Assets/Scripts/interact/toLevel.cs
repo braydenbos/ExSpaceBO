@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class toLevel : interactable
 {
-    public int level;
+    public string level;
     private GameObject portal;
     public Sprite sprite;
 
@@ -21,6 +21,6 @@ public class toLevel : interactable
     }
     public override void interact()
     {
-        SceneManager.LoadScene("World" + level);
+        SceneManager.LoadScene(level);
     }
 }
