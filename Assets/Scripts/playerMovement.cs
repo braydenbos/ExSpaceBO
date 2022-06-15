@@ -102,6 +102,7 @@ public class playerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow))
         {
+            animator.SetBool("walking", true);
             SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
             Icon.sprite = E;
         }
@@ -109,9 +110,6 @@ public class playerMovement : MonoBehaviour
         {
             SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
             Icon.sprite = Square;
-        }
-        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-        {
             animator.SetBool("walking", true);
         }
         else
@@ -148,6 +146,7 @@ public class playerMovement : MonoBehaviour
             sprintcool += 1 * Time.deltaTime;
             isSprinting = false;
         }
+        animator.SetBool("sprinting", isSprinting);
 
         sprintbar.sizeDelta = new Vector2(sprint / maxstam * 100, sprintbar.sizeDelta.y);
 
