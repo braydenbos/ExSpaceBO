@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class playerMovement : MonoBehaviour
 {
     private Animator animator;
+    private float Timer;
     //movement
     public float movementSpeed;
     private float originalSpeed;
@@ -100,6 +101,27 @@ public class playerMovement : MonoBehaviour
                 pickedUpSR.flipX = false;
             }
         }
+        else
+        {
+            moveX = 0f;
+        }
+        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            animator.SetBool("walking", true);
+        }
+        else
+        {
+            if (Timer < 0.01)
+            {
+                Timer += Time.deltaTime;
+            }
+            else
+            {
+                Timer = 0;
+                animator.SetBool("walking", false);
+            }
+            
+        }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow))
         {
             animator.SetBool("walking", true);
@@ -131,6 +153,11 @@ public class playerMovement : MonoBehaviour
         {
             sprint -= stamdown * Time.deltaTime;
             sprintcool = 0;
+            animator.SetBool("sprinting", true);
+        }
+        else
+        {
+            animator.SetBool("sprinting", false);
         }
         if (sprintcool >= 0.8 && sprint < maxstam)
         {

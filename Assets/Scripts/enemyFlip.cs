@@ -9,6 +9,7 @@ public class enemyFlip : MonoBehaviour
     private Vector2 prefFrame;
     private SpriteRenderer spriteRenderer;
 
+
     void Start()
     {
         prefFrame = transform.position;
