@@ -26,7 +26,7 @@ public class distractable : interactable
         droppoint = GameObject.Find("genarator");
         fdis = GameObject.Find("firstDistraction");
         AIDestinationSetter targets = Enemy.GetComponent<AIDestinationSetter>();
-        targets.targettag = fdis.transform.GetChild(0).tag;
+        targets.targettag = fdis.transform.GetChild(1).tag;
 
     }
     public override void interact()
@@ -80,11 +80,13 @@ public class distractable : interactable
             timer += 1 * Time.deltaTime;
             if (timer < timertime)
             {
+                transform.GetChild(3).gameObject.SetActive(false);
                 Switch = true;
                 targets.targettag = outlet.tag;
             }
             else
             {
+                transform.GetChild(3).gameObject.SetActive(true);
                 targets.targettag = "target";
                 activated = false;
             }

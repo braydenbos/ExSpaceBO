@@ -51,13 +51,18 @@ public class spriteLayerChange : MonoBehaviour
         {
             layer = 27;
         }
-        else if (gameObject.transform.position.y < 3.4 - minus && gameObject.transform.position.y > -30 - minus)
+        else if (gameObject.transform.position.y < 3.4 - minus && gameObject.transform.position.y > -13 - minus)
         {
             layer = 35;
         }
-        else if (gameObject.transform.position.y < -30 - minus)
+        else if (gameObject.transform.position.y < -13 - minus && gameObject.transform.position.y > -50 - minus)
         {
-            layer = 45;
+            layer = 39;
+        }
+
+        else if (gameObject.transform.position.y < -50 - minus && gameObject.transform.position.y > -70 - minus)
+        {
+            layer = 55;
         }
         // enemy compair player
         if (Enemy.transform.position.y > transform.position.y)
