@@ -11,7 +11,7 @@ public class distractable : interactable
     private GameObject pickupobject;
     private GameObject droppoint;
     private GameObject outlet;
-    private GameObject tTower;
+    private GameObject fdis;
     public float timertimeT;
     public float timertime;
     private float timer;
@@ -24,9 +24,9 @@ public class distractable : interactable
         timer = timertimeT;
         Enemy = GameObject.Find("Enemy");
         droppoint = GameObject.Find("genarator");
-        tTower = GameObject.Find("tTower");
+        fdis = GameObject.Find("firstDistraction");
         AIDestinationSetter targets = Enemy.GetComponent<AIDestinationSetter>();
-        targets.targettag = tTower.tag;
+        targets.targettag = fdis.transform.GetChild(0).tag;
 
     }
     public override void interact()
@@ -40,8 +40,9 @@ public class distractable : interactable
                 pickupobject.transform.parent = null;
                 pickupobject.GetComponent<SpriteRenderer>().sortingOrder = 24;
                 pickupobject.GetComponent<SpriteRenderer>().flipX = true;
+                outlet.transform.GetChild(0).gameObject.SetActive(false);
                 pickupobject.transform.SetParent(outlet.transform);
-                pickupobject.transform.position = new Vector2(outlet.transform.position.x + 0.75f, outlet.transform.position.y);
+                pickupobject.transform.position = new Vector2(outlet.transform.position.x + 1.8f, outlet.transform.position.y + 0.2f);
                 Destroy(pickupobject.GetComponent<pickup>());
                 activated = true;
                 timer = 0;
@@ -62,8 +63,9 @@ public class distractable : interactable
                 if (timer <= 0)
                 {
                     targets.targettag = "target";
-                    triggered = true;
+                    triggered = false;
                     Destroy(transform.GetChild(1).gameObject);
+                    fdis.transform.GetChild(1).gameObject.SetActive(false);
                 }
                 else
                 {
