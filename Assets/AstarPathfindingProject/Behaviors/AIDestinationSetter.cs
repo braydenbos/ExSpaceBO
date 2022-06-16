@@ -24,7 +24,7 @@ namespace Pathfinding {
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
 			AIPath movement = gameObject.GetComponent<AIPath>();
-			target = GameObject.FindGameObjectWithTag(targettag).GetComponent<Transform>();
+            target = GameObject.FindGameObjectWithTag(targettag).GetComponent<Transform>();
 			if (targettag != prefframe)
             {
 				if (targettag == "target")
