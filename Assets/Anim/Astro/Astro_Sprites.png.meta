@@ -107,10 +107,10 @@ TextureImporter:
       name: Astro_Sprites_1
       rect:
         serializedVersion: 2
-        x: 2807
-        y: 3275
-        width: 506
-        height: 759
+        x: 34
+        y: 3294
+        width: 333
+        height: 789
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: Astro_Sprites_2
       rect:
         serializedVersion: 2
-        x: 3330
-        y: 3274
-        width: 506
-        height: 759
+        x: 962
+        y: 3294
+        width: 333
+        height: 789
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: Astro_Sprites_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2442
-        width: 506
-        height: 759
+        x: 1427
+        y: 3294
+        width: 333
+        height: 789
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: Astro_Sprites_4
       rect:
         serializedVersion: 2
-        x: 531
-        y: 2438
-        width: 506
-        height: 771
+        x: 1890
+        y: 3294
+        width: 333
+        height: 789
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: Astro_Sprites_5
       rect:
         serializedVersion: 2
-        x: 1075
-        y: 2438
-        width: 506
-        height: 780
+        x: 2354
+        y: 3294
+        width: 333
+        height: 789
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,13 +209,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_6
+      name: Astro_Sprites_0
       rect:
         serializedVersion: 2
-        x: 1619
-        y: 2439
-        width: 506
-        height: 759
+        x: 498
+        y: 3294
+        width: 333
+        height: 789
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,92 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: beaaeb81c347c3340a2caca216a4ec35
-      internalID: -1512203830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Astro_Sprites_7
-      rect:
-        serializedVersion: 2
-        x: 2136
-        y: 2439
-        width: 506
-        height: 759
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ded4ca02198e656438a144ffa0c21ae5
-      internalID: 411027701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Astro_Sprites_8
-      rect:
-        serializedVersion: 2
-        x: 2657
-        y: 2438
-        width: 506
-        height: 759
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44b9bf1e7f4e58e4da2d5ab5f9a267f5
-      internalID: -103608931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Astro_Sprites_9
-      rect:
-        serializedVersion: 2
-        x: 3177
-        y: 2441
-        width: 506
-        height: 767
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 595cd06cad7aac54ca6dae3f374fb0d4
-      internalID: -917111564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Astro_Sprites_10
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 1617
-        width: 506
-        height: 764
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bbb266d7e495144794378f7cadc093b
-      internalID: -219841787
+      spriteID: 03607f4b0f643fd4b92de373f071ba55
+      internalID: -557140109
       vertices: []
       indices: 
       edges: []

@@ -38,7 +38,7 @@ public class distractable : interactable
             {
                 outlet = GameObject.Find("Outlet");
                 pickupobject.transform.parent = null;
-                pickupobject.GetComponent<SpriteRenderer>().sortingOrder = 23;
+                pickupobject.GetComponent<SpriteRenderer>().sortingOrder = 24;
                 pickupobject.GetComponent<SpriteRenderer>().flipX = true;
                 pickupobject.transform.SetParent(outlet.transform);
                 pickupobject.transform.position = new Vector2(outlet.transform.position.x + 0.75f, outlet.transform.position.y);

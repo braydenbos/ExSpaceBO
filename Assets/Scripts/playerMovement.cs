@@ -87,7 +87,7 @@ public class playerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         {
             spriteRenderer.flipX = true;
-            playercollider.offset = new Vector2(-0.52f, playercollider.offset.y);
+            playercollider.offset = new Vector2(-0.45f, playercollider.offset.y);
             if (sloweddown)
             {
                 pickedUpSR.flipX = true;
@@ -96,7 +96,7 @@ public class playerMovement : MonoBehaviour
         else if (Input.GetAxis("Horizontal") > 0)
         {
             spriteRenderer.flipX = false;
-            playercollider.offset = new Vector2(0.58f, playercollider.offset.y);
+            playercollider.offset = new Vector2(0.45f, playercollider.offset.y);
             if (sloweddown)
             {
                 pickedUpSR.flipX = false;
@@ -154,12 +154,8 @@ public class playerMovement : MonoBehaviour
         {
             sprint -= stamdown * Time.deltaTime;
             sprintcool = 0;
-            animator.SetBool("sprinting", true);
         }
-        else
-        {
-            animator.SetBool("sprinting", false);
-        }
+
         if (sprintcool >= 0.8 && sprint < maxstam)
         {
             sprint += stamup * Time.deltaTime;
@@ -168,6 +164,7 @@ public class playerMovement : MonoBehaviour
         {
             sprintcool = 0;
         }
+
         if (sprint <= 0 || Input.GetAxis("Sprint") == 0 || sprintcool > 0 )
         {
             movementSpeed = originalSpeed;

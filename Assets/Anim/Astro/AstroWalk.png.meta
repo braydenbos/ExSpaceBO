@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5fb1057f51544b84fb75e2d8a7e22d15
+guid: 0b86e739bf8b807498a898033ae7f9bc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -52,7 +52,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Astro_Sprites_1
+      name: AstroWalk_0
       rect:
         serializedVersion: 2
-        x: 2807
-        y: 3269
-        width: 478
-        height: 764
+        x: 63
+        y: 3300
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee20736e9b0ae894db936355e0059ade
-      internalID: -1209408696
+      spriteID: 6427c2419542e8e448ef6cecb5b71636
+      internalID: 1297243384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_2
+      name: AstroWalk_1
       rect:
         serializedVersion: 2
-        x: 3357
-        y: 3269
-        width: 382
-        height: 742
+        x: 550
+        y: 3294
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04171253e2fdaa04ca756df3311150bd
-      internalID: -1630565663
+      spriteID: 17e3150e29fde374789eed63f4ae91fe
+      internalID: 734630875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_3
+      name: AstroWalk_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2439
-        width: 423
-        height: 745
+        x: 1041
+        y: 3286
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89aeccbc690e49946b2c8625e12ad7e1
-      internalID: 19244926
+      spriteID: 57af938d3439b174d872e1b3d2cfc8ec
+      internalID: 1433818358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_4
+      name: AstroWalk_3
       rect:
         serializedVersion: 2
-        x: 541
-        y: 2439
-        width: 416
-        height: 768
+        x: 1579
+        y: 3304
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 307b3db22fd98174c9bf728b0fbbf21a
-      internalID: -1667469671
+      spriteID: 30c426ce72f7b6b4ebc02907251bb2ca
+      internalID: 1833074804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_5
+      name: AstroWalk_4
       rect:
         serializedVersion: 2
-        x: 1085
-        y: 2439
-        width: 452
-        height: 771
+        x: 2116
+        y: 3310
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8cf8b11c6d55184abed44e0b72001ad
-      internalID: 230521459
+      spriteID: 524dc33c8e25e4e48b1767c72f8b43fa
+      internalID: -1136299237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_6
+      name: AstroWalk_5
       rect:
         serializedVersion: 2
-        x: 1633
-        y: 2439
-        width: 430
-        height: 748
+        x: 2642
+        y: 3293
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95cc8adac25be214d9919eff35105457
-      internalID: 54832699
+      spriteID: ad47af098faf50141ad30d7d0f042407
+      internalID: 813884951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_7
+      name: AstroWalk_6
       rect:
         serializedVersion: 2
-        x: 2163
-        y: 2439
-        width: 382
-        height: 726
+        x: 3118
+        y: 3304
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5609f2a875d93c4ea359a123096c256
-      internalID: 243074962
+      spriteID: f2c028d1f2284f446ba01e75d0376b0c
+      internalID: -1096664593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_8
+      name: AstroWalk_7
       rect:
         serializedVersion: 2
-        x: 2651
-        y: 2440
-        width: 424
-        height: 747
+        x: 77
+        y: 2495
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de41ba3b678faab4fbf71ac6c4d42296
-      internalID: 1520341008
+      spriteID: 537219acb8014c944a08df9055999265
+      internalID: 1363003787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_9
+      name: AstroWalk_8
       rect:
         serializedVersion: 2
-        x: 3189
-        y: 2440
-        width: 450
-        height: 767
+        x: 673
+        y: 2505
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0417af32cc94264f8e28b3ac41cf60f
-      internalID: 1576429647
+      spriteID: b7fab6abe4a20c245b83f7a9c95dd313
+      internalID: -945271308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Astro_Sprites_10
+      name: AstroWalk_9
       rect:
         serializedVersion: 2
-        x: 25
-        y: 1619
-        width: 478
-        height: 760
+        x: 1246
+        y: 2473
+        width: 500
+        height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,34 +307,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c98081c800e4f0a43861282d6644bbbf
-      internalID: -1475592555
+      spriteID: f84ea413688a71c49a3b1357b7d94c51
+      internalID: 1677883123
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline: []
-    physicsShape: []
+    outline:
+    - - {x: -1194, y: -902}
+      - {x: -1194, y: 286}
+      - {x: -238, y: 286}
+      - {x: -238, y: -902}
+    physicsShape:
+    - - {x: -1127, y: 813}
+      - {x: -1127, y: 1428}
+      - {x: -624, y: 1428}
+      - {x: -624, y: 813}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Astro_Sprites_6: 54832699
-      Astro_Sprites_0: -1343464776
-      Astro_Sprites_9: 1576429647
-      Astro_Sprites_1: -1209408696
-      Astro_Sprites_5: 230521459
-      Astro_Sprites_4: -1667469671
-      Astro_Sprites_2: -1630565663
-      Astro_Sprites_3: 19244926
-      Astro_Sprites_7: 243074962
-      Astro_Sprites_8: 1520341008
-      Astro_Sprites_10: -1475592555
+      AstroWalk_0: 1297243384
+      AstroWalk_7: 1363003787
+      AstroWalk_3: 1833074804
+      AstroWalk_2: 1433818358
+      AstroWalk_5: 813884951
+      AstroWalk_8: -945271308
+      AstroWalk_1: 734630875
+      AstroWalk_6: -1096664593
+      AstroWalk_9: 1677883123
+      AstroWalk_4: -1136299237
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
