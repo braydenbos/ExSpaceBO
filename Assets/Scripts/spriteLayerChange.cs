@@ -67,7 +67,7 @@ public class spriteLayerChange : MonoBehaviour
         {
             layer = 55;
         }
-        // enemy compair player
+        // enemy compair player.
         if (Enemy.transform.position.y > transform.position.y)
         {
             sr.sortingOrder = layer + 1;
