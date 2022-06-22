@@ -51,16 +51,19 @@ public class spriteLayerChange : MonoBehaviour
         {
             layer = 27;
         }
-        else if (gameObject.transform.position.y < 3.4 - minus && gameObject.transform.position.y > -13 - minus)
+        else if (gameObject.transform.position.y < 3.4 - minus && gameObject.transform.position.y > -6.2 - minus)
+        {
+            layer = 33;
+        }
+        else if (gameObject.transform.position.y < -6.2 - minus && gameObject.transform.position.y > -15.5 - minus)
         {
             layer = 35;
         }
-        else if (gameObject.transform.position.y < -13 - minus && gameObject.transform.position.y > -50 - minus)
+        else if (gameObject.transform.position.y < -15.5 - minus && gameObject.transform.position.y > -51 - minus)
         {
-            layer = 39;
+            layer = 50;
         }
-
-        else if (gameObject.transform.position.y < -50 - minus && gameObject.transform.position.y > -70 - minus)
+        else if (gameObject.transform.position.y < -51 - minus)
         {
             layer = 55;
         }

@@ -17,6 +17,7 @@ public class distractable : interactable
     private float timer;
     private bool activated = false;
     private bool triggered = false;
+    private bool tri = false;
     public bool Switch;
 
     private void Start()
@@ -53,7 +54,7 @@ public class distractable : interactable
     private void Update()
     {
         AIDestinationSetter targets = Enemy.GetComponent<AIDestinationSetter>();
-        if (transform.childCount == 2)
+        if (transform.childCount == 5 && !tri)
         {
             trigger = transform.GetChild(1).gameObject.GetComponent<trigger>();
             //distraction tutoriel
@@ -64,7 +65,8 @@ public class distractable : interactable
                 {
                     targets.targettag = "target";
                     triggered = false;
-                    Destroy(transform.GetChild(1).gameObject);
+                    tri = true;
+                    Destroy(trigger);
                     fdis.transform.GetChild(1).gameObject.SetActive(false);
                 }
                 else
@@ -80,16 +82,19 @@ public class distractable : interactable
             timer += 1 * Time.deltaTime;
             if (timer < timertime)
             {
-                transform.GetChild(3).gameObject.SetActive(false);
+                transform.GetChild(3).gameObject.SetActive(true);
                 Switch = true;
                 targets.targettag = outlet.tag;
             }
             else
             {
-                transform.GetChild(3).gameObject.SetActive(true);
                 targets.targettag = "target";
                 activated = false;
             }
+        }
+        else
+        {
+            transform.GetChild(3).gameObject.SetActive(false);
         }
     }
 }

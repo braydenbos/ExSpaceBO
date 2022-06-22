@@ -107,10 +107,10 @@ TextureImporter:
       name: AstroWalk_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 3300
-        width: 500
-        height: 755
+        x: 69
+        y: 3282
+        width: 478
+        height: 773
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: AstroWalk_1
       rect:
         serializedVersion: 2
-        x: 550
-        y: 3294
-        width: 500
-        height: 755
+        x: 577
+        y: 3298
+        width: 458
+        height: 736
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: AstroWalk_2
       rect:
         serializedVersion: 2
-        x: 1041
-        y: 3286
-        width: 500
-        height: 755
+        x: 1040
+        y: 3285
+        width: 472
+        height: 744
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,9 +170,9 @@ TextureImporter:
       name: AstroWalk_3
       rect:
         serializedVersion: 2
-        x: 1579
-        y: 3304
-        width: 500
+        x: 1568
+        y: 3296
+        width: 469
         height: 755
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -191,10 +191,10 @@ TextureImporter:
       name: AstroWalk_4
       rect:
         serializedVersion: 2
-        x: 2116
-        y: 3310
-        width: 500
-        height: 755
+        x: 2112
+        y: 3287
+        width: 492
+        height: 768
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: AstroWalk_5
       rect:
         serializedVersion: 2
-        x: 2642
-        y: 3293
-        width: 500
-        height: 755
+        x: 2663
+        y: 3297
+        width: 483
+        height: 734
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,10 +233,10 @@ TextureImporter:
       name: AstroWalk_6
       rect:
         serializedVersion: 2
-        x: 3118
-        y: 3304
-        width: 500
-        height: 755
+        x: 3150
+        y: 3325
+        width: 470
+        height: 726
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +254,10 @@ TextureImporter:
       name: AstroWalk_7
       rect:
         serializedVersion: 2
-        x: 77
-        y: 2495
-        width: 500
-        height: 755
+        x: 70
+        y: 2500
+        width: 476
+        height: 741
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +275,10 @@ TextureImporter:
       name: AstroWalk_8
       rect:
         serializedVersion: 2
-        x: 673
-        y: 2505
-        width: 500
-        height: 755
+        x: 671
+        y: 2500
+        width: 486
+        height: 753
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: AstroWalk_9
       rect:
         serializedVersion: 2
-        x: 1246
-        y: 2473
-        width: 500
-        height: 755
+        x: 1235
+        y: 2479
+        width: 492
+        height: 753
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,6 +309,27 @@ TextureImporter:
       bones: []
       spriteID: f84ea413688a71c49a3b1357b7d94c51
       internalID: 1677883123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AstroWalk_10
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 3227
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc664b113c03f04e95822011f1b4456
+      internalID: 1161875572
       vertices: []
       indices: 
       edges: []
@@ -339,6 +360,7 @@ TextureImporter:
       AstroWalk_5: 813884951
       AstroWalk_8: -945271308
       AstroWalk_1: 734630875
+      AstroWalk_10: 1161875572
       AstroWalk_6: -1096664593
       AstroWalk_9: 1677883123
       AstroWalk_4: -1136299237
