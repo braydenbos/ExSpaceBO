@@ -5,19 +5,26 @@ using UnityEngine;
 public class trigger : MonoBehaviour
 {
     public bool triggered = false;
+    public string[] triggertags;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        for (int i = 0; i < triggertags.Length; i++)
         {
-            triggered = true;
+            if (collision.CompareTag(triggertags[i]))
+            {
+                triggered = true;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        for (int i = 0; i < triggertags.Length; i++)
         {
-            triggered = false;
+            if (collision.CompareTag(triggertags[i]))
+            {
+                triggered = false;
+            }
         }
     }
 }

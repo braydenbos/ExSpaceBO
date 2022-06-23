@@ -38,15 +38,12 @@ public class deur : interactable
         }
         else
         {
+            transform.GetChild(0).gameObject.SetActive(false);
             doortimer += Time.deltaTime;
         }
     }
     private void Update()
     {
-        if (Input.GetAxis("Interact") == 0 && doortimer > 0 && !open)
-        {
-            doortimer -=  Time.deltaTime;
-        }
         if (distraction.GetComponent<distractable>().Switch)
         {
             transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = lightGreen;

@@ -7,7 +7,6 @@ public class spriteLayerChange : MonoBehaviour
     private SpriteRenderer sr;
     private GameObject snap;
     public GameObject Enemy;
-    public LineRenderer lr;
     private SpriteRenderer SREnemy;
     private SpriteRenderer srChild;
     private SpriteRenderer srChild2;
@@ -51,15 +50,19 @@ public class spriteLayerChange : MonoBehaviour
         {
             layer = 27;
         }
-        else if (gameObject.transform.position.y < 3.4 - minus && gameObject.transform.position.y > -6.2 - minus)
+        else if (gameObject.transform.position.y < 3.4 - minus && gameObject.transform.position.y > -7.5 - minus)
         {
             layer = 33;
         }
-        else if (gameObject.transform.position.y < -6.2 - minus && gameObject.transform.position.y > -15.5 - minus)
+        else if (gameObject.transform.position.y < -7.5 - minus && gameObject.transform.position.y > -15.5 - minus)
         {
-            layer = 35;
+            layer = 37;
         }
-        else if (gameObject.transform.position.y < -15.5 - minus && gameObject.transform.position.y > -51 - minus)
+        else if (gameObject.transform.position.y < -15.5 - minus && gameObject.transform.position.y > -30 - minus)
+        {
+            layer = 44;
+        }
+        else if (gameObject.transform.position.y < -30 - minus && gameObject.transform.position.y > -51 - minus)
         {
             layer = 50;
         }
@@ -67,7 +70,7 @@ public class spriteLayerChange : MonoBehaviour
         {
             layer = 55;
         }
-        // enemy compair player
+        // enemy compair player.
         if (Enemy.transform.position.y > transform.position.y)
         {
             sr.sortingOrder = layer + 1;

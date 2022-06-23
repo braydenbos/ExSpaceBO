@@ -12,6 +12,7 @@ public class pickup : interactable
         Snap = GameObject.Find("Snap");
         if (Snap.transform.childCount == 0)
         {
+            GetComponent<CapsuleCollider2D>().enabled = false;
             transform.SetParent(Snap.transform);
             transform.position = new Vector3(Snap.transform.position.x, Snap.transform.position.y, Snap.transform.position.z);
             pickedup = true;
@@ -21,8 +22,9 @@ public class pickup : interactable
     {
         if (pickedup)
         {
-            if(Input.GetAxis("Drop") >0)
+            if(Input.GetAxis("Drop") > 0)
             {
+                GetComponent<CapsuleCollider2D>().enabled = true;
                 pickedup = false;
                 transform.parent = null;
 

@@ -1,0 +1,1002 @@
+fileFormatVersion: 2
+guid: 7a43479f259760b459358a0dfd41d98f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Healthmeter_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3789
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1803fcdf8be2c9747b310c4bbc426f47
+      internalID: -1567338875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_1
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 3789
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4770704f853694b4d85318387003e362
+      internalID: -332826998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_2
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 3789
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968b6155797096a4ab79889868379c22
+      internalID: -1611132698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_3
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 3789
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d591c5ec911f0ab4e83f29eb983774f2
+      internalID: 840251103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_4
+      rect:
+        serializedVersion: 2
+        x: 3268
+        y: 3789
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4d13a538791bd46b2a77b5b3141b5e
+      internalID: 457831795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3435
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468098539543cb0489da9c7e7721c124
+      internalID: -1599370550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_6
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 3435
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da41eab49c0fc4f44817ddf835068c1b
+      internalID: 2033553767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_7
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 3435
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8386b1118e95cd418517b234a46ea2e
+      internalID: 1239840827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_8
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 3435
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71950246495a6147b0a07bead016bd0
+      internalID: 1572014571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_9
+      rect:
+        serializedVersion: 2
+        x: 3268
+        y: 3435
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f9b8865ea70c14d9e07421a859e428
+      internalID: -1755350657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3081
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b4e8aedaa1c8f47aaed84da1846ea0
+      internalID: -628306086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_11
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 3081
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edeeac04be61364b9041a5aa73bdfaa
+      internalID: 1760244198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_12
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 3081
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3c360a6609e6e4884dab3dc7fedea3
+      internalID: -1648143563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_13
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 3081
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00754b277ea4eae438e6e858ff638b11
+      internalID: -1932017497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_14
+      rect:
+        serializedVersion: 2
+        x: 3268
+        y: 3081
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87558fb5fef99ce49898eefc68ebdb2e
+      internalID: -1155599076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_15
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2727
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a4bc19edf94b141bcdf8057bd68f89
+      internalID: -195595482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_16
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 2727
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75413ed402603f344b39e1cb43668ca9
+      internalID: -1968481909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_17
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2727
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6751e1b3cdcb944da55c87c2e3681a7
+      internalID: -604437951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_18
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 2727
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59f4c18868afdc4faa2f7a636d3cbee
+      internalID: 539139526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_19
+      rect:
+        serializedVersion: 2
+        x: 3268
+        y: 2727
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2469e19df8109e843a43db71ca1f6a4d
+      internalID: 342088678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_20
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2373
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3763bafbeda07fd43a94c26b52a5e358
+      internalID: 1922012411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_21
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 2373
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ae92847ec70ce4db9ead5492a21a6d
+      internalID: -1838320201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_22
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2373
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f531ac4439eff87489d5a34c43ade4d6
+      internalID: -832978356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_23
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 2373
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b177e10841f776346838d224f79fddc9
+      internalID: -1248884150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_24
+      rect:
+        serializedVersion: 2
+        x: 3268
+        y: 2373
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d881f45e8df4e4b99eed048ab84106
+      internalID: -805094576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_25
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2019
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e00d2a10ecea549829d8ca58eb43fc
+      internalID: -1230668259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_26
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 2019
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3e563e4454e7e4c808782b11956609
+      internalID: 837477995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_27
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 2019
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d38466e1f764214080d341de8108492
+      internalID: -1957899491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_28
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 2019
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5ce72d69a5e064e81db09cfcabc354
+      internalID: 716586057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_29
+      rect:
+        serializedVersion: 2
+        x: 3268
+        y: 2019
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39387e3676ae1724ea04027603367fba
+      internalID: -1626398762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_30
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1665
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e4a877b063e2947b2563cdd5cdf7b8
+      internalID: -340058263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_31
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 1665
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666404bf04895fc45ab27da26d1b2a1f
+      internalID: -881212991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_32
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1666
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31de819c746c6544c97e0920356060be
+      internalID: -702590801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_33
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 1665
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add805b5eff25634aaeb72b4aee3f852
+      internalID: 743863988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_34
+      rect:
+        serializedVersion: 2
+        x: 3268
+        y: 1665
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8479fecc8322b49b7b6ffa9f9d14b1
+      internalID: 19780911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_35
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1311
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62074ff5cfdf144096a0ddb02158ad2
+      internalID: -644534181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_36
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 1311
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da0882787ff5384c9ba70a470d32a5a
+      internalID: 1459694157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_37
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 1311
+        width: 774
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e06fe5dfd4e1a84ea2a5794dc39a659
+      internalID: 1842756620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_38
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 1311
+        width: 772
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd4261c0732a8840a33a360fc580626
+      internalID: -1551805573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Healthmeter_39
+      rect:
+        serializedVersion: 2
+        x: 3268
+        y: 1311
+        width: 780
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd85d87aba0da646b58791c96ab50a3
+      internalID: 1275275257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Healthmeter_13: -1932017497
+      Healthmeter_12: -1648143563
+      Healthmeter_22: -832978356
+      Healthmeter_8: 1572014571
+      Healthmeter_32: -702590801
+      Healthmeter_30: -340058263
+      Healthmeter_21: -1838320201
+      Healthmeter_29: -1626398762
+      Healthmeter_31: -881212991
+      Healthmeter_7: 1239840827
+      Healthmeter_9: -1755350657
+      Healthmeter_34: 19780911
+      Healthmeter_14: -1155599076
+      Healthmeter_1: -332826998
+      Healthmeter_20: 1922012411
+      Healthmeter_25: -1230668259
+      Healthmeter_35: -644534181
+      Healthmeter_28: 716586057
+      Healthmeter_24: -805094576
+      Healthmeter_19: 342088678
+      Healthmeter_33: 743863988
+      Healthmeter_37: 1842756620
+      Healthmeter_15: -195595482
+      Healthmeter_3: 840251103
+      Healthmeter_11: 1760244198
+      Healthmeter_6: 2033553767
+      Healthmeter_0: -1567338875
+      Healthmeter_4: 457831795
+      Healthmeter_39: 1275275257
+      Healthmeter_5: -1599370550
+      Healthmeter_10: -628306086
+      Healthmeter_23: -1248884150
+      Healthmeter_36: 1459694157
+      Healthmeter_38: -1551805573
+      Healthmeter_17: -604437951
+      Healthmeter_27: -1957899491
+      Healthmeter_18: 539139526
+      Healthmeter_26: 837477995
+      Healthmeter_16: -1968481909
+      Healthmeter_2: -1611132698
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
