@@ -7,6 +7,7 @@ public class droppointGen : interactable
 {
     public bool activated = false;
     private GameObject pickupobject;
+    public Transform gasRespawn;
     public bool alive = true;
     private SpriteRenderer lightSR;
 
@@ -18,6 +19,7 @@ public class droppointGen : interactable
             pickup pickupscript = pickupobject.GetComponent<pickup>();
             if (pickupscript.pickedup)
             {
+                Instantiate(pickupobject, gasRespawn);
                 lightSR = GameObject.Find("light").GetComponent<SpriteRenderer>();
                 lightSR.color = Color.green;
                 pickupobject.transform.parent = null;

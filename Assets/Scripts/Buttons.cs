@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
+    public string level;
     public GameObject player;
 
     public void toStart(int index)
     {
-        SceneManager.LoadScene("World" + index);
+        SceneManager.LoadScene(level);
     }
     public void quitGame()
     {

@@ -18,10 +18,5 @@ public class endScreen : MonoBehaviour
     void Update()
     {
         Timer -= Time.deltaTime;
-        for (float i = 1; i >= 0; i -= Time.deltaTime)
-        {
-            forNow.color = new Color(1, 1, 1, i);
-            yield return null;
-        }
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ebe9b6a5d57de7b429d9cb57a7cfc923
+guid: c66e463d6c93a7d4abc6d6da20223fac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,11 +48,11 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 173, y: 0, z: 419, w: 122}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: E_1
+      name: EndScreenButtonUI_0
       rect:
         serializedVersion: 2
-        x: 216
-        y: 465
-        width: 303
-        height: 174
+        x: 294
+        y: 192
+        width: 1411
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,29 +118,24 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81b6c1251854a3d4a8a0537d261f3ae8
-      internalID: -703997887
+      spriteID: a416326f0f087bc4ea708c0ad728d845
+      internalID: 521253033
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: -268.5, y: 73.5}
-      - {x: -268.5, y: 265.5}
-      - {x: 46.5, y: 265.5}
-      - {x: 46.5, y: 73.5}
+    outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      E_0: -2127979925
-      E_1: -703997887
+      EndScreenButtonUI_0: 521253033
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
