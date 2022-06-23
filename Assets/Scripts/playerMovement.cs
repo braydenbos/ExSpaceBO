@@ -19,6 +19,7 @@ public class playerMovement : MonoBehaviour
     //sprinting
     private bool isSprinting = false;
     public RectTransform sprintbar;
+    private Vector2 sprintbarOgSize;
     private float sprint;
     public float speedmultiplier;
     private float sprintcool;
@@ -26,13 +27,14 @@ public class playerMovement : MonoBehaviour
     //stamina
     public float stamup;
     public float stamdown;
-    public float maxstam = 20;
+    public float maxstam;
 
     //interactions
     public GameObject interactableIcon;
-    private Vector2 boxSize = new Vector2(0.1f, 1f);
+    private Vector2 boxSize = new Vector2(0.1f, 0.1f);
     public GameObject Snap;
-    public bool sloweddown = false;
+    private bool sloweddown = false;
+    List<GameObject> hit = new List<GameObject>();
     public Sprite E;
     public Sprite Square;
 
@@ -40,9 +42,9 @@ public class playerMovement : MonoBehaviour
     public bool menuOpen = false;
     public GameObject menu;
 
-
     void Start()
     {
+        sprintbarOgSize = sprintbar.sizeDelta;
         // movement setup
         originalSpeed = movementSpeed;
         sprint = maxstam;
@@ -56,11 +58,11 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
-            // Pickup
+        // Pickup
         if (Snap.transform.childCount > 0 && !sloweddown)
         {
             pickedUpSR = Snap.transform.GetComponentInChildren<SpriteRenderer>();
-            if(originalSpeed == movementSpeed)
+            if (originalSpeed == movementSpeed)
             {
                 movementSpeed -= 2;
                 originalSpeed = movementSpeed;
@@ -72,7 +74,7 @@ public class playerMovement : MonoBehaviour
             sloweddown = true;
             Snap.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
         }
-        else if(Snap.transform.childCount < 1 && sloweddown)
+        else if (Snap.transform.childCount < 1 && sloweddown)
 
         {
             movementSpeed += 2;
@@ -106,7 +108,7 @@ public class playerMovement : MonoBehaviour
         {
             moveX = 0f;
         }
-        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             animator.SetBool("walking", true);
         }
@@ -121,7 +123,7 @@ public class playerMovement : MonoBehaviour
                 Timer = 0;
                 animator.SetBool("walking", false);
             }
-            
+
         }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow))
         {
@@ -129,7 +131,7 @@ public class playerMovement : MonoBehaviour
             SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
             Icon.sprite = E;
         }
-        else if (Input.GetAxisRaw("Horizontal") !=0 || Input.GetAxisRaw("Vertical") != 0)
+        else if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
             SpriteRenderer Icon = interactableIcon.GetComponent<SpriteRenderer>();
             Icon.sprite = Square;
@@ -160,12 +162,12 @@ public class playerMovement : MonoBehaviour
         {
             sprint += stamup * Time.deltaTime;
         }
-        else if(sprint >= maxstam)
+        else if (sprint >= maxstam)
         {
             sprintcool = 0;
         }
 
-        if (sprint <= 0 || Input.GetAxis("Sprint") == 0 || sprintcool > 0 )
+        if (sprint <= 0 || Input.GetAxis("Sprint") == 0 || sprintcool > 0)
         {
             movementSpeed = originalSpeed;
             sprintcool += 1 * Time.deltaTime;
@@ -173,13 +175,13 @@ public class playerMovement : MonoBehaviour
         }
         animator.SetBool("sprinting", isSprinting);
 
-        sprintbar.sizeDelta = new Vector2(sprint / maxstam * 100, sprintbar.sizeDelta.y);
+        sprintbar.sizeDelta = new Vector2(sprintbarOgSize.x / maxstam * sprint, sprintbar.sizeDelta.y);
 
         //menu
         menu.SetActive(menuOpen);
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            menuOpen = !menuOpen;
+            menuOpen = !menuOpen
         }
 
         if (Input.GetAxis("Interact") > 0)
@@ -188,7 +190,7 @@ public class playerMovement : MonoBehaviour
         }
     }
 
-    public void OpenInteractableIcon()
+        public void OpenInteractableIcon()
     {
         interactableIcon.SetActive(true);
     }
@@ -199,19 +201,23 @@ public class playerMovement : MonoBehaviour
 
     private void CheckInteraction()
     {
-        RaycastHit2D[] hits = Physics2D.BoxCastAll(new Vector2(transform.position.x, transform.position.y - 3f), boxSize, 0, Vector2.zero);
-
-        if(hits.Length > 0)
+        foreach(GameObject i in hit)
         {
-            foreach(RaycastHit2D rc in hits)
+            if (i.GetComponent<interactable>())
             {
-                if (rc.transform.GetComponent<interactable>())
-                {
-                    rc.transform.GetComponent<interactable>().interact();
-                    return;
-                }
+                i.GetComponent<interactable>().interact();
+                return;
             }
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("+ "+collision);
+        hit.Add(collision.gameObject);
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        print("- " + collision);
+        hit.Remove(collision.gameObject);
+    }
 }

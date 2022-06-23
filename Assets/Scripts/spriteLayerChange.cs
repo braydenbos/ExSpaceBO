@@ -7,7 +7,6 @@ public class spriteLayerChange : MonoBehaviour
     private SpriteRenderer sr;
     private GameObject snap;
     public GameObject Enemy;
-    public LineRenderer lr;
     private SpriteRenderer SREnemy;
     private SpriteRenderer srChild;
     private SpriteRenderer srChild2;
