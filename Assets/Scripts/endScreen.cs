@@ -9,14 +9,7 @@ public class endScreen : MonoBehaviour
     private float Timer;
     public Image forNow;
 
-    void Start()
-    {
-
-    }
-
-
     void Update()
     {
-        Timer -= Time.deltaTime;
     }
 }

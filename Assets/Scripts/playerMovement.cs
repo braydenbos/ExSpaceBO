@@ -181,7 +181,7 @@ public class playerMovement : MonoBehaviour
         menu.SetActive(menuOpen);
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            menuOpen = !menuOpen
+            menuOpen = !menuOpen;
         }
 
         if (Input.GetAxis("Interact") > 0)
