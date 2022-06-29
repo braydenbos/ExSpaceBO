@@ -120,7 +120,8 @@ public class playerMovement : MonoBehaviour
         }
 
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
-        transform.position += movementSpeed * Time.deltaTime * moveDir;
+        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|attack"))transform.position += movementSpeed * Time.deltaTime * moveDir;
+
 
         // Sprinting.
         if (Input.GetAxis("Sprint") > 0 && !isSprinting)
