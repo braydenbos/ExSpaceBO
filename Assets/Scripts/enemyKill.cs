@@ -15,13 +15,14 @@ public class enemyKill : MonoBehaviour
         {
             if (!shield)
             {
-                SceneManager.LoadScene("mainMenu");
+                SceneManager.LoadScene("World3");
             }
             else
             {
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 shield = false;
                 shieldSprite.GetComponent<Image>().sprite = cracked;
+                spriteRenderer.color = Color.white;
             }
         }
     }
