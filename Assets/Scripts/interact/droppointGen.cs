@@ -7,23 +7,22 @@ public class droppointGen : interactable
 {
     public bool activated = false;
     private GameObject pickupobject;
+    public Transform gasRespawn;
+    private GameObject newGas;
     public bool alive = true;
-    private SpriteRenderer lightSR;
-
     public override void interact()
     {
         if (!activated)
         {
             pickupobject = GameObject.Find("gas");
-            pickup pickupscript = pickupobject.GetComponent<pickup>();
-            if (pickupscript.pickedup)
+            if (pickupobject.GetComponent<pickup>().pickedup)
             {
-                lightSR = GameObject.Find("light").GetComponent<SpriteRenderer>();
-                lightSR.color = Color.green;
-                pickupobject.transform.parent = null;
+                newGas = Instantiate(pickupobject, gasRespawn);
+                newGas.name = "gas";
+                newGas.GetComponent<CapsuleCollider2D>().enabled = true;
+                GameObject.Find("light").GetComponent<SpriteRenderer>().color = Color.green;
                 Destroy(pickupobject);
                 activated = true;
-                pickupscript.pickedup = false;
             }
         }
     }

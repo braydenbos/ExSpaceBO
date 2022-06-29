@@ -3231,7 +3231,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 22
+  m_SortingOrder: 23
   m_Sprite: {fileID: 21300000, guid: 2f95ae32f2ed91540883ebab829602b5, type: 3}
   m_Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
   m_FlipX: 0
@@ -3831,7 +3831,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 21
+  m_SortingOrder: 22
   m_Sprite: {fileID: 21300000, guid: a29a6c49bf09fde4abaab8c30e73f33f, type: 3}
   m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   m_FlipX: 0
@@ -10821,8 +10821,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5078fd76fcda77944a889ed12b6ae9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timertimeT: 5
-  timertime: 8
+  timerTimeT: 4
+  timerTime: 8
   Switch: 0
 --- !u!70 &809278953
 CapsuleCollider2D:
@@ -13719,7 +13719,7 @@ MonoBehaviour:
   version: 5
   radius: 1.38
   height: 0.05
-  canMove: 1
+  canMove: 0
   maxSpeed: 12
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
@@ -14182,6 +14182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  gasRespawn: {fileID: 1869852555}
   alive: 0
 --- !u!70 &1238102416
 CapsuleCollider2D:
@@ -14948,7 +14949,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 48
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: 75eeffd3093fa3a49be47f358cd4eb8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16973,7 +16974,7 @@ Transform:
   - {fileID: 28353976}
   - {fileID: 306801222}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1783693881
 GameObject:
@@ -17497,6 +17498,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.4640493, y: 1.7127146}
   m_EdgeRadius: 0
+--- !u!1 &1869852554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1869852555}
+  m_Layer: 0
+  m_Name: gasSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1869852555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869852554}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -45.1, y: 32.38, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881328796
 GameObject:
   m_ObjectHideFlags: 0
@@ -17934,7 +17966,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2220
   m_Sprite: {fileID: -190366056, guid: f63312794d809c046aa1b21d61c1e632, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

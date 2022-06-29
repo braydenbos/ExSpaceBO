@@ -12,8 +12,8 @@ public class distractable : interactable
     private GameObject droppoint;
     private GameObject outlet;
     private GameObject fdis;
-    public float timertimeT;
-    public float timertime;
+    public float timerTimeT;
+    public float timerTime;
     private float timer;
     private bool activated = false;
     private bool triggered = false;
@@ -22,7 +22,6 @@ public class distractable : interactable
 
     private void Start()
     {
-        timer = timertimeT;
         Enemy = GameObject.Find("Enemy");
         droppoint = GameObject.Find("genarator");
         fdis = GameObject.Find("firstDistraction");
@@ -46,7 +45,7 @@ public class distractable : interactable
                 pickupobject.transform.position = new Vector2(outlet.transform.position.x + 1.8f, outlet.transform.position.y + 0.2f);
                 Destroy(pickupobject.GetComponent<pickup>());
                 activated = true;
-                timer = 0;
+                timerTimeT = 0;
             }
         }
 
@@ -61,7 +60,7 @@ public class distractable : interactable
             if (trigger.triggered || triggered)
             {
                 triggered = true;
-                if (timer <= 0)
+                if (timerTimeT <= 0)
                 {
                     targets.targettag = "target";
                     triggered = false;
@@ -71,7 +70,7 @@ public class distractable : interactable
                 }
                 else
                 {
-                    timer -= Time.deltaTime;
+                    timerTimeT -= Time.deltaTime;
                 }
             }
 
@@ -80,7 +79,7 @@ public class distractable : interactable
         if (activated && droppoint.GetComponent<droppointGen>().activated)
         {
             timer += 1 * Time.deltaTime;
-            if (timer < timertime)
+            if (timer < timerTime)
             {
                 transform.GetChild(3).gameObject.SetActive(true);
                 Switch = true;
@@ -89,7 +88,9 @@ public class distractable : interactable
             else
             {
                 targets.targettag = "target";
-                activated = false;
+                droppoint.GetComponent<droppointGen>().activated = false;
+                GameObject.Find("light").GetComponent<SpriteRenderer>().color = new Color32(255,169,83,255);
+                timer = 0;
             }
         }
         else
