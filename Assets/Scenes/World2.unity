@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 
   player: {fileID: 0}
 --- !u!114 &19988571
 MonoBehaviour:
@@ -3893,6 +3894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 
   player: {fileID: 0}
 --- !u!114 &409612975
 MonoBehaviour:
@@ -11074,6 +11076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 
   player: {fileID: 0}
 --- !u!114 &833863757
 MonoBehaviour:
@@ -11400,7 +11403,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 
   player: {fileID: 1683863110}
+--- !u!1 &926770234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 926770235}
+  - component: {fileID: 926770237}
+  - component: {fileID: 926770236}
+  m_Layer: 5
+  m_Name: Shield
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &926770235
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926770234}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.853866, y: 1.2209051, z: 2.4418101}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1135031028}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 53.8, y: 11.900002}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &926770236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926770234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e41e23af34f845647890c3b0fc5cee20, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &926770237
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926770234}
+  m_CullTransparentMesh: 1
 --- !u!1 &932559977
 GameObject:
   m_ObjectHideFlags: 0
@@ -11454,6 +11534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c617bcbea6f425e44af8e85dc935cb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 
   player: {fileID: 0}
 --- !u!114 &932559980
 MonoBehaviour:
@@ -12268,7 +12349,7 @@ SpriteRenderer:
   m_Size: {x: 12, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &987912158
@@ -13405,6 +13486,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 378507537}
+  - {fileID: 926770235}
   m_Father: {fileID: 692159613}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14108,6 +14190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  gasRespawn: {fileID: 0}
   alive: 0
 --- !u!70 &1238102416
 CapsuleCollider2D:
@@ -16229,6 +16312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: 1
+  shieldSprite: {fileID: 926770234}
+  cracked: {fileID: 21300000, guid: 32ee308b89ae7904d85f54ac94fc5f58, type: 3}
 --- !u!114 &1683863112
 MonoBehaviour:
   m_ObjectHideFlags: 0

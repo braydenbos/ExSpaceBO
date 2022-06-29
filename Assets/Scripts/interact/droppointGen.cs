@@ -8,6 +8,7 @@ public class droppointGen : interactable
     public bool activated = false;
     private GameObject pickupobject;
     public Transform gasRespawn;
+    public Transform gasRespawn;
     private GameObject newGas;
     public bool alive = true;
     public override void interact()
