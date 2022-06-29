@@ -33,12 +33,11 @@ public class deur : interactable
         {
             doortimer = timer;
             gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-            transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = lightGreen;
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = lightGreen;
             open = true;
         }
         else
         {
-            transform.GetChild(0).gameObject.SetActive(false);
             doortimer += Time.deltaTime;
         }
     }

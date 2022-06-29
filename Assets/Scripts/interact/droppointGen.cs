@@ -8,7 +8,6 @@ public class droppointGen : interactable
     public bool activated = false;
     private GameObject pickupobject;
     public Transform gasRespawn;
-    public Transform gasRespawn;
     private GameObject newGas;
     public bool alive = true;
     public override void interact()
@@ -19,6 +18,7 @@ public class droppointGen : interactable
             if (pickupobject.GetComponent<pickup>().pickedup)
             {
                 newGas = Instantiate(pickupobject, gasRespawn);
+                newGas.transform.localScale = gasRespawn.localScale;
                 newGas.name = "gas";
                 newGas.GetComponent<CapsuleCollider2D>().enabled = true;
                 GameObject.Find("light").GetComponent<SpriteRenderer>().color = Color.green;

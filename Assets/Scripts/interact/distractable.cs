@@ -2,16 +2,19 @@ using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class distractable : interactable
 {
     private GameObject Enemy;
+    public arrow arrow;
     private trigger trigger;
     private GameObject pickupobject;
     private GameObject droppoint;
     private GameObject outlet;
     private GameObject fdis;
+    public Image edge;
     public float timerTimeT;
     public float timerTime;
     private float timer;
@@ -40,7 +43,6 @@ public class distractable : interactable
                 pickupobject.transform.parent = null;
                 pickupobject.GetComponent<SpriteRenderer>().sortingOrder = 24;
                 pickupobject.GetComponent<SpriteRenderer>().flipX = true;
-                outlet.transform.GetChild(0).gameObject.SetActive(false);
                 pickupobject.transform.SetParent(outlet.transform);
                 pickupobject.transform.position = new Vector2(outlet.transform.position.x + 1.8f, outlet.transform.position.y + 0.2f);
                 Destroy(pickupobject.GetComponent<pickup>());
@@ -73,6 +75,10 @@ public class distractable : interactable
                     timerTimeT -= Time.deltaTime;
                 }
             }
+            if (trigger.triggered)
+            {
+                arrow.Show(GameObject.Find("to").transform.position);
+            }
 
         }
         //real distraction
@@ -81,6 +87,8 @@ public class distractable : interactable
             timer += 1 * Time.deltaTime;
             if (timer < timerTime)
             {
+                if (timer < 3) edge.color = new Color32(255, 255, 255,(byte)(255/3*(3-timer)));
+                else edge.gameObject.SetActive(false);
                 transform.GetChild(3).gameObject.SetActive(true);
                 Switch = true;
                 targets.targettag = outlet.tag;

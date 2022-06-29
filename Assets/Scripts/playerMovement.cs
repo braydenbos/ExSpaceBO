@@ -31,7 +31,6 @@ public class playerMovement : MonoBehaviour
 
     //interactions
     public GameObject interactableIcon;
-    private Vector2 boxSize = new Vector2(0.1f, 0.1f);
     public GameObject Snap;
     private bool sloweddown = false;
     List<GameObject> hit = new List<GameObject>();
@@ -72,7 +71,6 @@ public class playerMovement : MonoBehaviour
                 originalSpeed -= 2;
             }
             sloweddown = true;
-            Snap.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
         }
         else if (Snap.transform.childCount < 1 && sloweddown)
 
@@ -112,15 +110,15 @@ public class playerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow))
         {
-            interactableIcon.GetComponent<SpriteRenderer>().sprite = E;
+            interactableIcon.GetComponent<Image>().sprite = E;
         }
         else if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            interactableIcon.GetComponent<SpriteRenderer>().sprite = Square;
+            interactableIcon.GetComponent<Image>().sprite = Square;
         }
 
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
-        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Armature|attack"))transform.position += movementSpeed * Time.deltaTime * moveDir;
+        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("standingAstro"))transform.position += movementSpeed * Time.deltaTime * moveDir;
 
 
         // Sprinting.
@@ -194,7 +192,7 @@ public class playerMovement : MonoBehaviour
         hit.Add(collision.gameObject);
     }
     private void OnTriggerExit2D(Collider2D collision)
-    {
+    {  
         hit.Remove(collision.gameObject);
     }
 }

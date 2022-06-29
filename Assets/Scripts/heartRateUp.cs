@@ -7,6 +7,7 @@ public class heartRateUp : MonoBehaviour
 {
     private GameObject heartRateMonitor;
     private trigger trigger;
+    public Transform player;
     private void Awake()
     {
         heartRateMonitor = GameObject.Find("heartrate");
@@ -14,6 +15,7 @@ public class heartRateUp : MonoBehaviour
     }
     private void Update()
     {
+        transform.position = player.position;
         if(trigger.triggered)
         {
             heartRateMonitor.GetComponent<Animator>().speed = 3;
