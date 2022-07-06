@@ -11,6 +11,7 @@ public class deur : interactable
     public GameObject distraction;
     public GameObject TimerBar;
     public Sprite lightGreen;
+    public AudioClip done;
     private bool open = false;
     private float ogsize;
     private float opentimer;
@@ -29,17 +30,22 @@ public class deur : interactable
     }
     public override void interact()
     {
+        if (doortimer == 0) GetComponent<AudioSource>().Play();
         if ( doortimer >= timer)
         {
             doortimer = timer;
             gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = lightGreen;
             open = true;
+            GetComponent<AudioSource>().clip = done;
+            GetComponent<AudioSource>().Play();
         }
         else
         {
             doortimer += Time.deltaTime;
+            GetComponent<AudioSource>().UnPause();
         }
+
     }
     private void Update()
     {
@@ -48,6 +54,7 @@ public class deur : interactable
             transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = lightGreen;
             if (open && opentimer < 8)
             {
+                if (opentimer == 0) doorLeft.GetComponent<AudioSource>().Play();
                 doorLeft.transform.position = new Vector2(ogPlaceL - opentimer / 1.5f, doorLeft.transform.position.y);
                 if(opentimer < 3.5)
                 {
@@ -61,6 +68,7 @@ public class deur : interactable
         {
             gameObject.GetComponent<EdgeCollider2D>().enabled = false;
         }
+        if (Input.GetAxis("Interact") == 0) GetComponent<AudioSource>().Pause();
         TimerBar.transform.localScale = new Vector2(TimerBar.transform.localScale.x,ogsize/timer* doortimer);
     }
 }

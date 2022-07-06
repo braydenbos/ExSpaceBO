@@ -8,7 +8,7 @@ public class Buttons : MonoBehaviour
     public string level;
     public GameObject player;
 
-    public void toStart(int index)
+    public void toStart()
     {
         SceneManager.LoadScene(level);
     }

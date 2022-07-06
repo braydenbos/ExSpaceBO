@@ -1,30 +1,38 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using CodeMonkey.Utils;
 
-public class arrow : MonoBehaviour {
+public class arrow : MonoBehaviour
+{
 
-    [SerializeField] private Camera uiCamera;
     [SerializeField] private Sprite arrowSprite;
     [SerializeField] private Sprite crossSprite;
+    [SerializeField] private bool timerActivated = false;
+    [SerializeField] private float timer;
 
     private Vector3 targetPosition;
-    private Transform pointerRectTransform;
-    private SpriteRenderer pointerImage;
+    private RectTransform pointerRectTransform;
+    private Image pointerImage;
 
-    private void Awake() 
+    private void Awake()
     {
-        pointerImage = GetComponent<SpriteRenderer>();
-        pointerRectTransform = GetComponent<Transform>();
-
+        pointerRectTransform = GetComponent<RectTransform>();
+        pointerImage = GetComponent<Image>();
 
         Hide();
     }
+    private void Update()
+    {
+        if (timerActivated)
+        {
+            //print(timer);
+            timer += Time.deltaTime;
+            if (timer >= 8) pointerImage.enabled = true;
 
-    private void Update() {
+        }
+
         float borderSize = 100f;
         Vector3 targetPositionScreenPoint = Camera.main.WorldToScreenPoint(targetPosition);
         bool isOffScreen = targetPositionScreenPoint.x <= borderSize || targetPositionScreenPoint.x >= Screen.width - borderSize || targetPositionScreenPoint.y <= borderSize || targetPositionScreenPoint.y >= Screen.height - borderSize;
@@ -40,15 +48,13 @@ public class arrow : MonoBehaviour {
             if (cappedTargetScreenPosition.y <= borderSize) cappedTargetScreenPosition.y = borderSize;
             if (cappedTargetScreenPosition.y >= Screen.height - borderSize) cappedTargetScreenPosition.y = Screen.height - borderSize;
 
-            Vector3 pointerWorldPosition = uiCamera.ScreenToWorldPoint(cappedTargetScreenPosition);
-            pointerRectTransform.position = pointerWorldPosition;
+            pointerRectTransform.position = cappedTargetScreenPosition;
             pointerRectTransform.localPosition = new Vector3(pointerRectTransform.localPosition.x, pointerRectTransform.localPosition.y, 0f);
         }
         else
         {
             pointerImage.sprite = crossSprite;
-            Vector3 pointerWorldPosition = uiCamera.ScreenToWorldPoint(targetPositionScreenPoint);
-            pointerRectTransform.position = pointerWorldPosition;
+            pointerRectTransform.position = targetPositionScreenPoint;
             pointerRectTransform.localPosition = new Vector3(pointerRectTransform.localPosition.x, pointerRectTransform.localPosition.y, 0f);
 
             pointerRectTransform.localEulerAngles = Vector3.zero;
@@ -67,12 +73,15 @@ public class arrow : MonoBehaviour {
 
     public void Hide()
     {
-        gameObject.SetActive(false);
+        timer = 0;
+        pointerImage.enabled = false;
     }
 
     public void Show(Vector3 targetPosition)
     {
-        gameObject.SetActive(true);
+        timer = 0;
+        pointerImage.enabled = false;
+        timerActivated = true;
         this.targetPosition = targetPosition;
     }
 }

@@ -14,11 +14,14 @@ public class distractable : interactable
     private GameObject droppoint;
     private GameObject outlet;
     private GameObject fdis;
+    public droppointGen droppointGen;
+    public Transform button;
+    public Transform gas;
     public Image edge;
     public float timerTimeT;
     public float timerTime;
     private float timer;
-    private bool activated = false;
+    public bool activated = false;
     private bool triggered = false;
     private bool tri = false;
     public bool Switch;
@@ -39,6 +42,8 @@ public class distractable : interactable
             pickupobject = GameObject.Find("to");
             if (pickupobject.GetComponent<pickup>().pickedup)
             {
+                if (droppointGen.activated) arrow.Show(button.position);
+                else arrow.Show(gas.position);
                 outlet = GameObject.Find("Outlet");
                 pickupobject.transform.parent = null;
                 pickupobject.GetComponent<SpriteRenderer>().sortingOrder = 24;
@@ -64,6 +69,7 @@ public class distractable : interactable
                 triggered = true;
                 if (timerTimeT <= 0)
                 {
+                    fdis.GetComponent<AudioSource>().mute = true;
                     targets.targettag = "target";
                     triggered = false;
                     tri = true;
@@ -90,6 +96,7 @@ public class distractable : interactable
                 if (timer < 3) edge.color = new Color32(255, 255, 255,(byte)(255/3*(3-timer)));
                 else edge.gameObject.SetActive(false);
                 transform.GetChild(3).gameObject.SetActive(true);
+                GetComponent<AudioSource>().mute = false;
                 Switch = true;
                 targets.targettag = outlet.tag;
             }
@@ -103,6 +110,7 @@ public class distractable : interactable
         }
         else
         {
+            GetComponent<AudioSource>().mute = true;
             transform.GetChild(3).gameObject.SetActive(false);
         }
     }

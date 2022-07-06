@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,13 @@ public class playerMovement : MonoBehaviour
     private float moveX;
     private float moveY;
     private bool goingRight;
+    public AudioSource steps;
+
+    //object parts
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer pickedUpSR;
     private CapsuleCollider2D playercollider;
-    private Animator animator;
+    private Animator animator;    
 
     //sprinting
     private bool isSprinting = false;
@@ -80,11 +84,9 @@ public class playerMovement : MonoBehaviour
             sloweddown = false;
         }
 
-
-        // Walking
         moveY = Input.GetAxis("Vertical");
         moveX = Input.GetAxis("Horizontal");
-        if(moveX != 0 || moveY != 0)
+        if (moveX != 0 || moveY != 0)
         {
             if (moveX < 0)
             {
@@ -94,10 +96,12 @@ public class playerMovement : MonoBehaviour
             {
                 goingRight = false;
             }
+            steps.mute = false;
             animator.SetBool("walking", true);
         }
         else
         {
+            steps.mute = true;
             animator.SetBool("walking", false);
         }
 
@@ -118,10 +122,9 @@ public class playerMovement : MonoBehaviour
         }
 
         Vector3 moveDir = new Vector3(moveX, moveY).normalized;
-        if(!animator.GetCurrentAnimatorStateInfo(0).IsName("standingAstro"))transform.position += movementSpeed * Time.deltaTime * moveDir;
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("standingAstro")) transform.position += movementSpeed * Time.deltaTime * moveDir;
 
 
-        // Sprinting.
         if (Input.GetAxis("Sprint") > 0 && !isSprinting)
         {
             originalSpeed = movementSpeed;
@@ -131,6 +134,7 @@ public class playerMovement : MonoBehaviour
 
         if (Input.GetAxis("Sprint") > 0 && isSprinting && sprint > 0)
         {
+            steps.pitch = 1.16f;
             sprint -= stamdown * Time.deltaTime;
             sprintcool = 0;
         }
@@ -144,8 +148,9 @@ public class playerMovement : MonoBehaviour
             sprintcool = 0;
         }
 
-        if (sprint <= 0 || Input.GetAxis("Sprint") == 0 || sprintcool > 0)
+        if (sprint < 0 || Input.GetAxis("Sprint") == 0 || sprintcool > 0)
         {
+            steps.pitch = 0.87f;
             movementSpeed = originalSpeed;
             sprintcool += 1 * Time.deltaTime;
             isSprinting = false;
@@ -166,7 +171,6 @@ public class playerMovement : MonoBehaviour
             CheckInteraction();
         }
     }
-
     public void OpenInteractableIcon()
     {
         interactableIcon.SetActive(true);

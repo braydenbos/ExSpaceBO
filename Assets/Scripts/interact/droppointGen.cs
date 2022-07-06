@@ -8,6 +8,10 @@ public class droppointGen : interactable
     public bool activated = false;
     private GameObject pickupobject;
     public Transform gasRespawn;
+    public distractable distractable;
+    public Transform button;
+    public Transform to;
+    public arrow arrow;
     private GameObject newGas;
     public bool alive = true;
     public override void interact()
@@ -17,6 +21,8 @@ public class droppointGen : interactable
             pickupobject = GameObject.Find("gas");
             if (pickupobject.GetComponent<pickup>().pickedup)
             {
+                if (distractable.activated) arrow.Show(button.position);
+                else arrow.Show(to.position);
                 newGas = Instantiate(pickupobject, gasRespawn);
                 newGas.transform.localScale = gasRespawn.localScale;
                 newGas.name = "gas";

@@ -32,10 +32,12 @@ public class enemyFlip : MonoBehaviour
         if(thisFrame != prefFrame)
         {
             animator.SetBool("walking",true);
+            gameObject.GetComponent<AudioSource>().mute = false;   
         }
         else
         {
             animator.SetBool("walking", false);
+            gameObject.GetComponent<AudioSource>().mute = true;
         }
         prefFrame = transform.position;
     }
