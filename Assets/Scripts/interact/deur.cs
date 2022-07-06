@@ -26,7 +26,7 @@ public class deur : interactable
         doorRight = GameObject.Find("doorRight");
         ogPlaceR = doorRight.transform.position.x;
         ogPlaceL = doorLeft.transform.position.x;
-        ogsize = TimerBar.transform.localScale.y;
+        ogsize = TimerBar.transform.localScale.x;
     }
     public override void interact()
     {
@@ -69,6 +69,6 @@ public class deur : interactable
             gameObject.GetComponent<EdgeCollider2D>().enabled = false;
         }
         if (Input.GetAxis("Interact") == 0) GetComponent<AudioSource>().Pause();
-        TimerBar.transform.localScale = new Vector2(TimerBar.transform.localScale.x,ogsize/timer* doortimer);
+        TimerBar.transform.localScale = new Vector2(ogsize/timer* doortimer, TimerBar.transform.localScale.y);
     }
 }
