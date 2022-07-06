@@ -11,7 +11,6 @@ namespace Pathfinding {
 		public string prefframe;
 		public Transform target;
 		IAstarAI ai;
-
 		void OnEnable () {
 			ai = GetComponent<IAstarAI>();
 			if (ai != null) ai.onSearchPath += Update;

@@ -1269,7 +1269,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.017
   m_Pitch: 0.59
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1365,7 +1365,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.48
   m_Pitch: 1.1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
