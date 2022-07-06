@@ -20486,6 +20486,8 @@ MonoBehaviour:
   TimerBar: {fileID: 274114118}
   lightGreen: {fileID: 21300000, guid: 8b1b88c2b82080e44ab36ef96bed619a, type: 3}
   done: {fileID: 8300000, guid: 2db59ca93b411b543b4bf09c5b8e9eb4, type: 3}
+  arrow: {fileID: 1481673059}
+  portal: {fileID: 1985616888}
 --- !u!70 &2054678363
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

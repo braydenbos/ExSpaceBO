@@ -7,5 +7,6 @@ public class fullScreen : MonoBehaviour
     private void Awake()
     {
         Screen.fullScreen = true;
+        Cursor.visible = true;
     }
 }

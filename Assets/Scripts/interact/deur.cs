@@ -12,6 +12,8 @@ public class deur : interactable
     public GameObject TimerBar;
     public Sprite lightGreen;
     public AudioClip done;
+    public arrow arrow;
+    public Transform portal;
     private bool open = false;
     private float ogsize;
     private float opentimer;
@@ -54,7 +56,11 @@ public class deur : interactable
             transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = lightGreen;
             if (open && opentimer < 8)
             {
-                if (opentimer == 0) doorLeft.GetComponent<AudioSource>().Play();
+                if (opentimer == 0) 
+                {
+                    doorLeft.GetComponent<AudioSource>().Play();
+                    arrow.Show(portal.position); 
+                }
                 doorLeft.transform.position = new Vector2(ogPlaceL - opentimer / 1.5f, doorLeft.transform.position.y);
                 if(opentimer < 3.5)
                 {
