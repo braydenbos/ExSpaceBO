@@ -161,6 +161,7 @@ public class playerMovement : MonoBehaviour
 
         //menu
         menu.SetActive(menuOpen);
+        Cursor.visible = menuOpen;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             menuOpen = !menuOpen;

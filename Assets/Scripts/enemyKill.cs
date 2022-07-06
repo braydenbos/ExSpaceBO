@@ -35,6 +35,7 @@ public class enemyKill : MonoBehaviour
 
     private void DeathAnim()
     {
+        Cursor.visible = true;
         end.SetActive(true);
         enemy.SetActive(false);
         gameObject.SetActive(false);
